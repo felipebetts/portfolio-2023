@@ -1,6 +1,9 @@
 import { ScrollContext } from '@/utils/scroll-observer'
 import Image from 'next/image'
 import React, { useCallback, useContext, useRef, useState } from 'react'
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
+import NextLink from 'next/link'
+import styles from '@/styles/masthead.module.css'
 
 const Masthead: React.FC = () => {
     const [imageLoaded, setImageLoaded] = useState(false)
@@ -35,9 +38,28 @@ const Masthead: React.FC = () => {
             <div className={`flex-grow-0 pt-10 transition-opacity duration-1000 z-10 
                 ${imageLoaded ?  'opacity-100' : 'opacity-0'}
             `}>
-                <Image src='/images/profile.jfif' width={128 / 3} height={144 / 3} alt='logo' onLoad={handleImageLoaded} />
+                {/* <div className="flex justify-center items-center">
+                    <IoLogoGithub className='h-14 w-14 p-2 mx-3 transition-opacity duration-300 opacity-100 hover:opacity-80' />
+                    <NextLink
+                        href='https://github.com/felipebetts'
+                    >
+                        <IoLogoLinkedin className='h-14 w-14 p-2 mx-3' />
+                    </NextLink>
+                </div> */}
             </div>
-            <div className="p-12 font-bold z-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] text-center flex flex-1 items-center justify-center flex-col">
+            <div
+                className={`
+                    p-12 font-bold z-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] text-center flex flex-1 items-center justify-center flex-col
+                    transition-opacity duration-1000 ${imageLoaded ?  'opacity-100' : 'opacity-0'}
+                `}
+            >
+                <Image
+                    src='/images/profile.jfif'
+                    width={128} height={144}
+                    alt='Profile picture'
+                    onLoad={handleImageLoaded}
+                    className='rounded-full drop-shadow-2xl mb-6'
+                />
                 <h1 className='mb-6 text-4xl xl:text-5xl'>Felipe Betts</h1>
                 <h2 className='mb-2 text-2xl xl:text-3xl -tracking-tight'>
                     <span>Software Developer</span>

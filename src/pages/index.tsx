@@ -13,6 +13,7 @@ const Home: React.FC = () => {
       </Head>
       <Masthead />
       <About />
+      <div className="min-h-screen bg-red-600"></div>
     </>
   )
 }
