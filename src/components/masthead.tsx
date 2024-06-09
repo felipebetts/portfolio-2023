@@ -79,7 +79,7 @@ const Masthead: React.FC = () => {
         </div>
         <div
           className={`flex-grow-0 pb-20 md:pb-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)]
-             transition-all duration-1000 z-10  ${
+             transition-all duration-1000 z-10 animate-bounce ${
                imageLoaded ? 'opacity-100' : 'opacity-0 -translate-y-10'
              }
                 `}
