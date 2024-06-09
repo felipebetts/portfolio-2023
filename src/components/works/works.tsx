@@ -11,6 +11,16 @@ import Image from 'next/image'
 
 const workList = [
   {
+    sub: 'Lead',
+    main: (
+      <>
+        the Front-End team at{' '}
+        <WorkLink href="https://margelo.io/">OneFan</WorkLink>
+      </>
+    ),
+    image: '/images/onefan/osasuna-home.png'
+  },
+  {
     sub: 'Built',
     main: (
       <>
@@ -19,18 +29,6 @@ const workList = [
       </>
     ),
     image: '/images/valepay/1.jpg'
-  },
-  {
-    sub: 'Crafted',
-    main: (
-      <>
-        a{' '}
-        <WorkLink href="https://margelo.io/">
-          Construction Budget Simulator
-        </WorkLink>
-      </>
-    ),
-    image: '/images/orcamento_express/cover.png'
   },
   {
     sub: 'Worked at',
@@ -43,14 +41,16 @@ const workList = [
     image: '/images/hurb/hurb-home.png'
   },
   {
-    sub: 'Lead',
+    sub: 'Crafted',
     main: (
       <>
-        the Front-End team at{' '}
-        <WorkLink href="https://margelo.io/">OneFan</WorkLink>
+        a{' '}
+        <WorkLink href="https://margelo.io/">
+          Construction Budget Simulator
+        </WorkLink>
       </>
     ),
-    image: '/images/onefan/osasuna-home.png'
+    image: '/images/orcamento_express/cover.png'
   }
 ]
 

@@ -12,9 +12,9 @@ const blockOpacity = (sectionProgress: number, blockNo: number) => {
 }
 
 const blocks: string[] = [
-  'Hello, and welcome to my website.',
+  'Hello, and welcome to this website.',
   "I'm a curious fullstack web developer who's always eager to explore new technologies and programming languages.",
-  'With experience in React, Node, and Django, I love crafting interactive and responsive web applications.',
+  'With my experience in React, Next.js and Node, I love crafting interactive and responsive web applications.',
   'My goal is to deliver solutions that are both efficient and aesthetically pleasing.'
 ]
 
@@ -43,7 +43,7 @@ const About: React.FC = () => {
 
   return (
     <div ref={containerRef} className="bg-black text-white">
-      <div className="min-h-screen max-w-5xl mx-auto px-10 lg:px-20 py-24 md:py-28 lg:py-36 flex flex-col justify-center items-center text-4xl md:text-6xl tracking-tight font-semibold">
+      <div className="min-h-screen max-w-5xl mx-auto px-10 lg:px-20 py-24 md:py-28 lg:py-36 flex flex-col justify-center items-center text-5xl md:text-7xl tracking-tight font-semibold">
         <div className="leading-[1.15]">
           {blocks &&
             blocks.map((block, i) => (
