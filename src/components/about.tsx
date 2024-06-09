@@ -12,10 +12,11 @@ const blockOpacity = (sectionProgress: number, blockNo: number) => {
 }
 
 const blocks: string[] = [
-  'Hello, and welcome to this website.',
+  'Hello, welcome to this website!',
   "I'm a curious fullstack web developer who's always eager to explore new technologies and programming languages.",
-  'With my experience in React, Next.js and Node, I love crafting interactive and responsive web applications.',
-  'My goal is to deliver solutions that are both efficient and aesthetically pleasing.'
+  'Using my experience in React, Next.js and Node, I love crafting interactive and responsive web applications.',
+  'My goal is to deliver solutions that are both efficient and aesthetically pleasing.',
+  'Since 2021, I have...'
 ]
 
 const About: React.FC = () => {

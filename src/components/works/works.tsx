@@ -51,6 +51,18 @@ const workList = [
       </>
     ),
     image: '/images/orcamento_express/cover.png'
+  },
+  {
+    sub: 'and',
+    main: (
+      <>
+        a{' '}
+        <WorkLink href="https://margelo.io/">
+          Construction Budget Simulator
+        </WorkLink>
+      </>
+    ),
+    image: '/images/orcamento_express/cover.png'
   }
 ]
 
@@ -61,7 +73,7 @@ const Works = () => {
         <WorkBackground />
       </TileBackground>
       {workList.map((el, i) => (
-        <TileContent>
+        <TileContent key={`work_${i}`}>
           <Tile
             page={i}
             renderContent={({ progress }) => (
