@@ -1,15 +1,79 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 
-const Footer = () => {
+const links = [
+  {
+    label: 'works',
+    href: '/works'
+  },
+  {
+    label: 'contato@felipebetts.com.br',
+    href: 'mailto:contato@felipebetts.com.br'
+  }
+]
+
+{
+  /* <div
+          className={`flex-grow-0 pt-10 transition-opacity duration-1000 
+                ${imageLoaded ? 'opacity-100' : 'opacity-0'}
+                `}
+        >
+          <div className="flex justify-center items-center relative z-10">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/felipebetts"
+              className="transition-opacity duration-300 opacity-100 hover:opacity-80"
+            >
+              <IoLogoGithub className="h-14 w-14 p-2 mx-3 " />
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/felipe-betts/"
+              className="transition-opacity duration-300 opacity-100 hover:opacity-80"
+            >
+              <IoLogoLinkedin className="h-14 w-14 p-2 mx-3 " />
+            </Link>
+          </div>
+        </div> */
+}
+
+const Footer: React.FC = () => {
   return (
-    <footer className="flex gap-8 items-center justify-center bg-black text-white p-16 relative z-10">
-      <Image src="/assets/logo.jpg" alt="logo" width={18} height={18} />
-      <Link href="/works">works</Link>
-      <Link href="mailto:contato@felipebetts.com.br">
-        contato@felipebetts.com.br
-      </Link>
+    <footer className="flex flex-col gap-8 items-center justify-center bg-black text-white p-16 relative z-10">
+      <section className="flex gap-8 items-center justify-center">
+        {links.map((link, i) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="underline underline-offset-8 decoration-1"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </section>
+
+      <section className="flex justify-center items-center pt-6">
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/felipebetts"
+          className="transition-opacity duration-300 opacity-100 hover:opacity-80"
+        >
+          <IoLogoGithub className="h-14 w-14 p-2 mx-3 " />
+        </Link>
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/felipe-betts/"
+          className="transition-opacity duration-300 opacity-100 hover:opacity-80"
+        >
+          <IoLogoLinkedin className="h-14 w-14 p-2 mx-3 " />
+        </Link>
+      </section>
     </footer>
   )
 }

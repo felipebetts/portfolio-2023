@@ -1,7 +1,5 @@
 import React, { useCallback, useContext, useRef, useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 
 import { ScrollContext } from '@/utils/scroll-observer'
 
@@ -25,7 +23,7 @@ const Masthead: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen sticky top-0 z-0"
+      className="min-h-screen sticky top-0 -z-10"
       style={{
         transform: `translateY(-${progress * 20}vh)`
       }}
@@ -35,43 +33,19 @@ const Masthead: React.FC = () => {
         loop
         muted
         playsInline
-        className="absolute w-full h-full object-cover -z-10"
+        className="absolute w-full h-full object-cover -z-[1]"
       >
         <source src="/videos/matrix-bg.mp4" type="video/mp4; codecs=hvc1" />
         <source src="/videos/matrix-bg.webm" type="video/webm; codecs=vp9" />
       </video>
       <div className="min-h-screen h-full w-full flex flex-col justify-center items-center bg-black/25">
         <div
-          className={`flex-grow-0 pt-10 transition-opacity duration-1000 
-                ${imageLoaded ? 'opacity-100' : 'opacity-0'}
-                `}
-        >
-          <div className="flex justify-center items-center relative z-10">
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/felipebetts"
-              className="transition-opacity duration-300 opacity-100 hover:opacity-80"
-            >
-              <IoLogoGithub className="h-14 w-14 p-2 mx-3 " />
-            </Link>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/felipe-betts/"
-              className="transition-opacity duration-300 opacity-100 hover:opacity-80"
-            >
-              <IoLogoLinkedin className="h-14 w-14 p-2 mx-3 " />
-            </Link>
-          </div>
-        </div>
-        <div
           className={`
                     p-12 font-bold z-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] text-center flex flex-1 items-center justify-center flex-col
                     transition-opacity duration-1000 ${
                       imageLoaded ? 'opacity-100' : 'opacity-0'
                     }
-                    `}
+          `}
         >
           <Image
             src="/images/profile.jfif"
