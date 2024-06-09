@@ -25,7 +25,7 @@ const Contact = () => {
     }
   }
   return (
-    <div className="bg-black text-white flex flex-col justify-center pt-10 min-h-[90vh]">
+    <div className="bg-black text-white flex flex-col justify-center pt-10 min-h-[90vh] relative z-10">
       <div className="flex flex-1 flex-col justify-center items-center pt-10 lg:pt-6">
         <div className="pb-10">
           <Image src="/assets/logo.jpg" alt="logo" height={30} width={30} />

@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+:root {
+  --white: #f5f5f5;
+}
+
+html,
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,10 +15,8 @@ html, body {
 
 body {
   background: black;
-  color: white;
+  color: var(--white);
 }
-
-
 
 /* :root {
   --max-width: 1100px;
@@ -122,5 +125,3 @@ a {
     color-scheme: dark;
   }
 } */
-
-

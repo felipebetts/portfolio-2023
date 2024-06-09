@@ -2,7 +2,6 @@ import { ScrollContext } from '@/utils/scroll-observer'
 import Image from 'next/image'
 import React, { useCallback, useContext, useRef, useState } from 'react'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
-import NextLink from 'next/link'
 import styles from '@/styles/masthead.module.css'
 
 const Masthead: React.FC = () => {
@@ -25,7 +24,7 @@ const Masthead: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen sticky top-0 -z-10"
+      className="min-h-screen sticky top-0 z-0"
       style={{
         transform: `translateY(-${progress * 20}vh)`
       }}
@@ -41,20 +40,29 @@ const Masthead: React.FC = () => {
         <source src="/videos/matrix-bg.webm" type="video/webm; codecs=vp9" />
       </video>
       <div className="min-h-screen h-full w-full flex flex-col justify-center items-center bg-black/25">
-        {/* <div className="flex-grow-0 pt-10 z-10"></div> */}
         <div
-          className={`flex-grow-0 pt-10 transition-opacity duration-1000 z-10 
+          className={`flex-grow-0 pt-10 transition-opacity duration-1000 
                 ${imageLoaded ? 'opacity-100' : 'opacity-0'}
                 `}
         >
-          {/* <div className="flex justify-center items-center">
-                    <IoLogoGithub className='h-14 w-14 p-2 mx-3 transition-opacity duration-300 opacity-100 hover:opacity-80' />
-                    <NextLink
-                    href='https://github.com/felipebetts'
-                    >
-                        <IoLogoLinkedin className='h-14 w-14 p-2 mx-3' />
-                        </NextLink>
-                </div> */}
+          <div className="flex justify-center items-center">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/felipebetts"
+              className="transition-opacity duration-300 opacity-100 hover:opacity-80"
+            >
+              <IoLogoGithub className="h-14 w-14 p-2 mx-3 " />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/felipe-betts/"
+              className="transition-opacity duration-300 opacity-100 hover:opacity-80"
+            >
+              <IoLogoLinkedin className="h-14 w-14 p-2 mx-3 " />
+            </a>
+          </div>
         </div>
         <div
           className={`
