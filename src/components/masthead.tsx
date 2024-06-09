@@ -1,9 +1,9 @@
-import { ScrollContext } from '@/utils/scroll-observer'
-import Image from 'next/image'
 import React, { useCallback, useContext, useRef, useState } from 'react'
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
-import styles from '@/styles/masthead.module.css'
+import Image from 'next/image'
 import Link from 'next/link'
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
+
+import { ScrollContext } from '@/utils/scroll-observer'
 
 const Masthead: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState(false)
@@ -46,7 +46,7 @@ const Masthead: React.FC = () => {
                 ${imageLoaded ? 'opacity-100' : 'opacity-0'}
                 `}
         >
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center relative z-10">
             <Link
               target="_blank"
               rel="noopener noreferrer"
