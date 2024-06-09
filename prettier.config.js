@@ -4,9 +4,8 @@ const options = {
     bracketSpacing: true,
     endOfLine: 'lf',
     semi: false,
-    tabWidth: 4,
+    tabWidth: 2,
     trailingComma: 'none'
 }
 
 module.exports = options
-    
