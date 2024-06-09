@@ -40,7 +40,7 @@ const workList = [
         Engineer
       </>
     ),
-    image: '/images/notebook.png'
+    image: '/images/hurb/hurb-home.png'
   },
   {
     sub: 'Lead',
@@ -50,7 +50,7 @@ const workList = [
         <WorkLink href="https://margelo.io/">OneFan</WorkLink>
       </>
     ),
-    image: '/images/notebook.png'
+    image: '/images/onefan/osasuna-home.png'
   }
 ]
 
