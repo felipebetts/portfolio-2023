@@ -33,12 +33,12 @@ const Masthead: React.FC = () => {
         loop
         muted
         playsInline
-        className="absolute w-full h-full object-cover -z-[1]"
+        className="absolute w-full h-full object-cover -z-10"
       >
         <source src="/videos/matrix-bg.mp4" type="video/mp4; codecs=hvc1" />
         <source src="/videos/matrix-bg.webm" type="video/webm; codecs=vp9" />
       </video>
-      <div className="min-h-screen h-full w-full flex flex-col justify-center items-center bg-black/25">
+      <div className="min-h-screen h-full w-full flex flex-col justify-center items-center bg-black/40">
         <div
           className={`
                     p-12 font-bold z-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] text-center flex flex-1 items-center justify-center flex-col
