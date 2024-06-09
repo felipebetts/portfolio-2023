@@ -1,5 +1,6 @@
-import About from '@/components/layout/about'
-import Masthead from '@/components/layout/masthead'
+import Contact from '@/components/contact-form'
+import About from '@/components/about'
+import Masthead from '@/components/masthead'
 import Works from '@/components/works/works'
 import Head from 'next/head'
 import React from 'react'
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
       <Masthead />
       <About />
       <Works />
+      <Contact />
       <div className="min-h-screen bg-red-600"></div>
     </>
   )
