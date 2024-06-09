@@ -34,7 +34,7 @@ export const WorkLeft: React.FC<SideProps> = ({ children, progress }) => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center text-3xl lg:text-4xl h-[30vh] lg:h-auto"
+      className="flex flex-col items-center justify-center text-3xl lg:text-4xl h-[30vh] lg:h-auto px-4"
       style={{
         transform: `translateY(${translateY}px)`
       }}
@@ -49,7 +49,7 @@ export const WorkRight: React.FC<SideProps> = ({ children, progress }) => {
 
   return (
     <div
-      className="flex flex-1 lg:items-center justify-center h-screen"
+      className="flex flex-1 lg:items-center justify-center h-screen px-4"
       style={{
         transform: `translateY(${translateY}px)`
       }}
