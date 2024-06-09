@@ -21,7 +21,6 @@ const Home: React.FC = () => {
       <About />
       <Works />
       <Contact />
-      <Footer />
     </>
   )
 }

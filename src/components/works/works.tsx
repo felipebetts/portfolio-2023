@@ -14,8 +14,7 @@ const workList = [
     sub: 'Lead',
     main: (
       <>
-        the Front-End team at{' '}
-        <WorkLink href="https://margelo.io/">OneFan</WorkLink>
+        the Front-End team at <WorkLink href="/works/onefan">OneFan</WorkLink>
       </>
     ),
     image: '/images/onefan/osasuna-home.png'
@@ -25,7 +24,7 @@ const workList = [
     main: (
       <>
         a{' '}
-        <WorkLink href="https://margelo.io/">digital bank&apos;s MVP</WorkLink>
+        <WorkLink href="/works/digital-bank">digital bank&apos;s MVP</WorkLink>
       </>
     ),
     image: '/images/valepay/1.jpg'
@@ -34,8 +33,7 @@ const workList = [
     sub: 'Worked at',
     main: (
       <>
-        <WorkLink href="https://margelo.io/">Hurb</WorkLink> as a Software
-        Engineer
+        <WorkLink href="/works/hurb">Hurb</WorkLink> as a Software Engineer
       </>
     ),
     image: '/images/hurb/hurb-home.png'
@@ -45,7 +43,7 @@ const workList = [
     main: (
       <>
         a{' '}
-        <WorkLink href="https://margelo.io/">
+        <WorkLink href="/works/budget-simulator">
           Construction Budget Simulator
         </WorkLink>
       </>
@@ -56,10 +54,7 @@ const workList = [
     sub: 'and',
     main: (
       <>
-        a{' '}
-        <WorkLink href="https://margelo.io/">
-          Construction Budget Simulator
-        </WorkLink>
+        <WorkLink href="/works">more projects</WorkLink>
       </>
     ),
     image: '/images/orcamento_express/cover.png'
