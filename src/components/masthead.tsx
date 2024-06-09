@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, { useCallback, useContext, useRef, useState } from 'react'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import styles from '@/styles/masthead.module.css'
+import Link from 'next/link'
 
 const Masthead: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState(false)
@@ -46,22 +47,22 @@ const Masthead: React.FC = () => {
                 `}
         >
           <div className="flex justify-center items-center">
-            <a
+            <Link
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/felipebetts"
               className="transition-opacity duration-300 opacity-100 hover:opacity-80"
             >
               <IoLogoGithub className="h-14 w-14 p-2 mx-3 " />
-            </a>
-            <a
+            </Link>
+            <Link
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.linkedin.com/in/felipe-betts/"
               className="transition-opacity duration-300 opacity-100 hover:opacity-80"
             >
               <IoLogoLinkedin className="h-14 w-14 p-2 mx-3 " />
-            </a>
+            </Link>
           </div>
         </div>
         <div
