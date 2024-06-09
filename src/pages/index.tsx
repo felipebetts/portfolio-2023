@@ -4,6 +4,7 @@ import Masthead from '@/components/masthead'
 import Works from '@/components/works/works'
 import Head from 'next/head'
 import React from 'react'
+import Footer from '@/components/footer'
 
 const Home: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const Home: React.FC = () => {
       <About />
       <Works />
       <Contact />
-      <div className="min-h-screen bg-red-600"></div>
+      <Footer />
     </>
   )
 }

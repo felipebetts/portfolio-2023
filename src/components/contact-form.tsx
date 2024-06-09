@@ -28,7 +28,7 @@ const Contact = () => {
     <div className="bg-black text-white flex flex-col justify-center pt-10 min-h-[90vh]">
       <div className="flex flex-1 flex-col justify-center items-center pt-10 lg:pt-6">
         <div className="pb-10">
-          <Image src="/assets/away.jpg" alt="logo" height={30} width={30} />
+          <Image src="/assets/logo.jpg" alt="logo" height={30} width={30} />
         </div>
         <h2 className="text-4xl font-bold">Send me a message</h2>
         <form
