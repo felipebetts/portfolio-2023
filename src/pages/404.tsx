@@ -5,6 +5,7 @@ import React from 'react'
 const NotFound = () => {
   return (
     <main className="min-h-[75vh] w-full flex flex-col gap-8 items-center justify-center">
+      <h1 className="mb-6 text-4xl xl:text-5xl">Page Not Found</h1>
       <Image
         src="/images/cat.png"
         width={248}
@@ -13,7 +14,6 @@ const NotFound = () => {
         // onLoad={handleImageLoaded}
         className="drop-shadow-2xl mb-6"
       />
-      <h1 className="mb-6 text-4xl xl:text-5xl">Page Not Found</h1>
       <h2 className="mb-2 text-2xl xl:text-3xl -tracking-tight">
         <span>
           Return to the{' '}
