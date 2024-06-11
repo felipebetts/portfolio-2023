@@ -1,3 +1,4 @@
+import LazyImage from '@/components/lazy-image'
 import WorkDetails from '@/components/works/work-details'
 import Image from 'next/image'
 import React from 'react'
@@ -6,12 +7,11 @@ const DigitalBank = () => {
   return (
     <WorkDetails sub="Valepay" title="Digital Bank">
       <section className="py-3">
-        <Image
+        <LazyImage
+          alt="cover"
           src="/images/valepay/1.jpg"
           height={600}
           width={1200}
-          alt="cover"
-          className="rounded-md mx-auto"
         />
       </section>
       <section className="py-3">
