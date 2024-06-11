@@ -4,7 +4,7 @@ import { clsx } from 'clsx'
 
 interface Props {
   alt: string
-  className: string
+  className?: string
   height: number
   src: string
   width: number
