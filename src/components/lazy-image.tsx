@@ -17,8 +17,6 @@ const LazyImage: React.FC<Props> = ({ alt, className, height, src, width }) => {
     setImageLoaded(true)
   }, [])
 
-  console.log('imageLoaded:', imageLoaded)
-
   return (
     <div className={clsx('relative', className)}>
       <div
