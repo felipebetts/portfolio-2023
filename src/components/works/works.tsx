@@ -17,7 +17,7 @@ const workList = [
         the Front-End team at <WorkLink href="/works/onefan">OneFan</WorkLink>
       </>
     ),
-    image: '/images/onefan/osasuna-home.png'
+    image: '/images/onefan/notebook.png'
   },
   {
     sub: 'Built',
@@ -27,7 +27,7 @@ const workList = [
         <WorkLink href="/works/digital-bank">digital bank&apos;s MVP</WorkLink>
       </>
     ),
-    image: '/images/valepay/1.jpg'
+    image: '/images/notebook.png'
   },
   {
     sub: 'Worked at',
@@ -36,7 +36,7 @@ const workList = [
         <WorkLink href="/works/hurb">Hurb</WorkLink> as a Software Engineer
       </>
     ),
-    image: '/images/hurb/hurb-home.png'
+    image: '/images/hurb/notebook.png'
   },
   {
     sub: 'Crafted',
@@ -48,7 +48,7 @@ const workList = [
         </WorkLink>
       </>
     ),
-    image: '/images/orcamento_express/cover.png'
+    image: '/images/orcamento_express/notebook.png'
   },
   {
     sub: 'and',
@@ -57,7 +57,7 @@ const workList = [
         <WorkLink href="/works">more projects</WorkLink>
       </>
     ),
-    image: '/images/orcamento_express/cover.png'
+    image: '/images/notebook.png'
   }
 ]
 
