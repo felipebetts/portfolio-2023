@@ -1,7 +1,4 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
-import { IoCaretBack } from 'react-icons/io5'
 import Breadcrumbs from '../breadcrumbs'
 
 interface Props {

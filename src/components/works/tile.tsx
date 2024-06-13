@@ -47,8 +47,6 @@ export const TileWrapper: React.FC<WrapperProps> = ({
     currentPage = percentY * numOfPages
   }
 
-  // console.log('currentPage:', currentPage)
-
   return (
     <TileContext.Provider value={{ numOfPages, currentPage }}>
       <div
@@ -77,9 +75,6 @@ export const Tile: React.FC<TileProps> = ({ page, renderContent }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const progress = Math.max(0, currentPage - page)
 
-  console.log('progress:', progress)
-
-  // let opacity = 1
   let opacity = Math.min(1, Math.max(0, progress * 4))
   if (progress > 0.75 && page < numOfPages - 1) {
     opacity = Math.max(0, (1.0 - progress) * 4)
