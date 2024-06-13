@@ -28,8 +28,8 @@ export const WorkBackground: React.FC = () => (
 
 export const WorkLeft: React.FC<SideProps> = ({ children, progress }) => {
   let translateY = Math.max(0, 50 - progress * 3 * 50)
-  if (progress > 0.85) {
-    translateY = Math.max(-50, -(progress - 0.85) * 2 * 50)
+  if (progress > 0.75) {
+    translateY = Math.max(-50, -(progress - 0.75) * 2 * 50)
   }
 
   return (
