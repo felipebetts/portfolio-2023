@@ -49,12 +49,12 @@ export const WorkRight: React.FC<SideProps> = ({ children, progress }) => {
 
   return (
     <div
-      className="flex flex-1 lg:items-center justify-center h-screen px-4"
+      className="flex lg:items-center justify-center h-[70vh] lg:h-screen px-4"
       style={{
         transform: `translateY(${translateY}px)`
       }}
     >
-      <div className="w-full max-w-md pt-10 lg:pt-0 px-10 md:px-0">
+      <div className="w-full max-w-md pt-10 lg:pt-0 px-10 md:px-0 flex items-center justify-center">
         {children}
       </div>
     </div>

@@ -67,26 +67,33 @@ const Works = () => {
       <TileBackground>
         <WorkBackground />
       </TileBackground>
-      {workList.map((el, i) => (
-        <TileContent key={`work_${i}`}>
-          <Tile
-            page={i}
-            renderContent={({ progress }) => (
-              <WorkContainer>
-                <WorkLeft progress={progress}>
-                  <div>{el.sub}</div>
-                  <div className="text-axl md:text-5xl font-semibold tracking-tight">
-                    {el.main}
-                  </div>
-                </WorkLeft>
-                <WorkRight progress={progress}>
-                  <Image src={el.image} width={840} height={1620} alt="Away" />
-                </WorkRight>
-              </WorkContainer>
-            )}
-          />
-        </TileContent>
-      ))}
+      <div className="sticky top-0 h-screen w-full">
+        {workList.map((el, i) => (
+          <TileContent key={`work_${i}`}>
+            <Tile
+              page={i}
+              renderContent={({ progress }) => (
+                <WorkContainer>
+                  <WorkLeft progress={progress}>
+                    <div>{el.sub}</div>
+                    <div className="text-axl md:text-5xl font-semibold tracking-tight">
+                      {el.main}
+                    </div>
+                  </WorkLeft>
+                  <WorkRight progress={progress}>
+                    <Image
+                      src={el.image}
+                      width={840}
+                      height={1620}
+                      alt="Away"
+                    />
+                  </WorkRight>
+                </WorkContainer>
+              )}
+            />
+          </TileContent>
+        ))}
+      </div>
     </TileWrapper>
   )
 }

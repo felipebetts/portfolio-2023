@@ -47,6 +47,8 @@ export const TileWrapper: React.FC<WrapperProps> = ({
     currentPage = percentY * numOfPages
   }
 
+  // console.log('currentPage:', currentPage)
+
   return (
     <TileContext.Provider value={{ numOfPages, currentPage }}>
       <div
@@ -67,7 +69,7 @@ export const TileBackground: React.FC<BackgroundProps> = ({ children }) => (
 )
 
 export const TileContent: React.FC<BackgroundProps> = ({ children }) => (
-  <div className="sticky top-0 h-screen overflow-hidden">{children}</div>
+  <div className="absolute h-full w-full overflow-hidden">{children}</div>
 )
 
 export const Tile: React.FC<TileProps> = ({ page, renderContent }) => {
@@ -75,8 +77,11 @@ export const Tile: React.FC<TileProps> = ({ page, renderContent }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const progress = Math.max(0, currentPage - page)
 
+  console.log('progress:', progress)
+
+  // let opacity = 1
   let opacity = Math.min(1, Math.max(0, progress * 4))
-  if (progress > 0.85 && page < numOfPages - 1) {
+  if (progress > 0.75 && page < numOfPages - 1) {
     opacity = Math.max(0, (1.0 - progress) * 4)
   }
 
