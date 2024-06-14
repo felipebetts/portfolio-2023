@@ -1,5 +1,11 @@
 import React from 'react'
-import { Tile, TileBackground, TileContent, TileWrapper } from './tile'
+import {
+  Tile,
+  TileBackground,
+  TileContainer,
+  TileContent,
+  TileWrapper
+} from './tile'
 import {
   WorkBackground,
   WorkContainer,
@@ -67,26 +73,33 @@ const Works = () => {
       <TileBackground>
         <WorkBackground />
       </TileBackground>
-      {workList.map((el, i) => (
-        <TileContent key={`work_${i}`}>
-          <Tile
-            page={i}
-            renderContent={({ progress }) => (
-              <WorkContainer>
-                <WorkLeft progress={progress}>
-                  <div>{el.sub}</div>
-                  <div className="text-axl md:text-5xl font-semibold tracking-tight">
-                    {el.main}
-                  </div>
-                </WorkLeft>
-                <WorkRight progress={progress}>
-                  <Image src={el.image} width={840} height={1620} alt="Away" />
-                </WorkRight>
-              </WorkContainer>
-            )}
-          />
-        </TileContent>
-      ))}
+      <TileContainer>
+        {workList.map((el, i) => (
+          <TileContent key={`work_${i}`}>
+            <Tile
+              page={i}
+              renderContent={({ progress }) => (
+                <WorkContainer>
+                  <WorkLeft progress={progress}>
+                    <div>{el.sub}</div>
+                    <div className="text-axl md:text-5xl font-semibold tracking-tight">
+                      {el.main}
+                    </div>
+                  </WorkLeft>
+                  <WorkRight progress={progress}>
+                    <Image
+                      src={el.image}
+                      width={840}
+                      height={1620}
+                      alt="Away"
+                    />
+                  </WorkRight>
+                </WorkContainer>
+              )}
+            />
+          </TileContent>
+        ))}
+      </TileContainer>
     </TileWrapper>
   )
 }
