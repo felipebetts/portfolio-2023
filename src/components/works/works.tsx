@@ -1,5 +1,11 @@
 import React from 'react'
-import { Tile, TileBackground, TileContent, TileWrapper } from './tile'
+import {
+  Tile,
+  TileBackground,
+  TileContainer,
+  TileContent,
+  TileWrapper
+} from './tile'
 import {
   WorkBackground,
   WorkContainer,
@@ -67,7 +73,7 @@ const Works = () => {
       <TileBackground>
         <WorkBackground />
       </TileBackground>
-      <div className="sticky top-0 h-screen w-full">
+      <TileContainer>
         {workList.map((el, i) => (
           <TileContent key={`work_${i}`}>
             <Tile
@@ -93,7 +99,7 @@ const Works = () => {
             />
           </TileContent>
         ))}
-      </div>
+      </TileContainer>
     </TileWrapper>
   )
 }

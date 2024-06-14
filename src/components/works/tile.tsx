@@ -70,6 +70,10 @@ export const TileContent: React.FC<BackgroundProps> = ({ children }) => (
   <div className="absolute h-full w-full overflow-hidden">{children}</div>
 )
 
+export const TileContainer: React.FC<BackgroundProps> = ({ children }) => (
+  <div className="sticky top-0 h-screen w-full">{children}</div>
+)
+
 export const Tile: React.FC<TileProps> = ({ page, renderContent }) => {
   const { currentPage, numOfPages } = useContext(TileContext)
   const containerRef = useRef<HTMLDivElement>(null)
