@@ -17,10 +17,6 @@ interface ParallaxContainerProps {
   page?: number
 }
 
-interface ParallaxBrickProps {
-  children: React.ReactNode
-}
-
 export const ParallaxContext = createContext<ParallaxContextValue>({
   pagesAmount: 0,
   currentPage: 0
@@ -66,7 +62,7 @@ export const ParallaxContainer: React.FC<ParallaxContainerProps> = ({
   children,
   page = 0
 }) => {
-  const { currentPage } = useContext(ParallaxContext)
+  const { currentPage, pagesAmount } = useContext(ParallaxContext)
   const progress = currentPage - page - 0.5
   let isCurrent = false
 
@@ -76,21 +72,15 @@ export const ParallaxContainer: React.FC<ParallaxContainerProps> = ({
 
   return (
     <div
-      className={`sticky h-screen w-full top-0 ${s.container}`}
+      className={`sticky min-h-screen w-full top-0 ${s.container}`}
       style={{
         zIndex: page + 1,
         transform:
-          currentPage > page ? `translateY(-${progress * 220}px)` : undefined
+          page !== pagesAmount - 1
+            ? `translateY(-${progress * 220}px)`
+            : undefined
       }}
     >
-      {children}
-    </div>
-  )
-}
-
-export const ParallaxBrick: React.FC<ParallaxBrickProps> = ({ children }) => {
-  return (
-    <div className="absolute top-0 h-full w-full flex justify-center items-center">
       {children}
     </div>
   )
