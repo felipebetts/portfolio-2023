@@ -1,33 +1,16 @@
-import React, { useCallback, useContext, useRef, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import Image from 'next/image'
 
-import { ScrollContext } from '@/utils/scroll-observer'
+import { ParallaxSinglePage } from './parallax'
 
 const Masthead: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState(false)
-  const { scrollY } = useContext(ScrollContext)
-
-  let progress = 0
-
-  const containerRef = useRef<HTMLDivElement>(null)
-  const { current: containerEl } = containerRef
-
-  if (containerEl) {
-    progress = Math.min(1, scrollY / containerEl.clientHeight)
-  }
-
   const handleImageLoaded = useCallback(() => {
     setImageLoaded(true)
   }, [])
 
   return (
-    <div
-      ref={containerRef}
-      className="min-h-screen sticky top-0 -z-10"
-      style={{
-        transform: `translateY(-${progress * 20}vh)`
-      }}
-    >
+    <ParallaxSinglePage>
       <video
         autoPlay
         loop
@@ -89,7 +72,7 @@ const Masthead: React.FC = () => {
           </svg>
         </div>
       </div>
-    </div>
+    </ParallaxSinglePage>
   )
 }
 
