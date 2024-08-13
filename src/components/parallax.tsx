@@ -17,6 +17,10 @@ interface ParallaxContainerProps {
   page?: number
 }
 
+interface ParallaxSinglePageProps {
+  children: React.ReactNode
+}
+
 export const ParallaxContext = createContext<ParallaxContextValue>({
   pagesAmount: 0,
   currentPage: 0
@@ -72,13 +76,40 @@ export const ParallaxContainer: React.FC<ParallaxContainerProps> = ({
 
   return (
     <div
-      className={`sticky min-h-screen w-full top-0 ${s.container}`}
+      className={`sticky h-screen w-full top-0 ${s.container}`}
       style={{
         zIndex: page + 1,
         transform:
           page !== pagesAmount - 1
             ? `translateY(-${progress * 220}px)`
             : undefined
+      }}
+    >
+      {children}
+    </div>
+  )
+}
+
+export const ParallaxSinglePage: React.FC<ParallaxSinglePageProps> = ({
+  children
+}) => {
+  const { scrollY } = useContext(ScrollContext)
+
+  let progress = 0
+
+  const containerRef = useRef<HTMLDivElement>(null)
+  const { current: containerEl } = containerRef
+
+  if (containerEl) {
+    progress = Math.min(1, scrollY / containerEl.clientHeight)
+  }
+
+  return (
+    <div
+      ref={containerRef}
+      className="h-screen sticky top-0 -z-10"
+      style={{
+        transform: `translateY(-${progress * 20}vh)`
       }}
     >
       {children}
