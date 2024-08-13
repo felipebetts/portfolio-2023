@@ -1,0 +1,15 @@
+.container:nth-of-type(4n) {
+  background-color: #d91b1a;
+}
+
+.container:nth-of-type(4n + 1) {
+  background-color: #3a568c;
+}
+
+.container:nth-of-type(4n + 2) {
+  background-color: #4f8365;
+}
+
+.container:nth-of-type(4n + 3) {
+  background-color: #670751;
+}
