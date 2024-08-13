@@ -75,7 +75,7 @@ const Works = () => {
       </TileBackground>
       <TileContainer>
         {workList.map((el, i) => (
-          <TileContent key={`work_${i}`}>
+          <TileContent key={`work_${i}`} index={i}>
             <Tile
               page={i}
               renderContent={({ progress }) => (

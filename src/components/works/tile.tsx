@@ -9,6 +9,10 @@ interface TileProps {
 
 interface BackgroundProps {
   children: React.ReactNode
+}
+
+interface ContentProps {
+  children: React.ReactNode
   index: number
 }
 
@@ -67,7 +71,7 @@ export const TileBackground: React.FC<BackgroundProps> = ({ children }) => (
   <div className="absolute h-full w-full">{children}</div>
 )
 
-export const TileContent: React.FC<BackgroundProps> = ({
+export const TileContent: React.FC<ContentProps> = ({
   children,
   index = 0
 }) => (
