@@ -80,7 +80,7 @@ export const ParallaxContainer: React.FC<ParallaxContainerProps> = ({
       style={{
         zIndex: page + 1,
         transform:
-          currentPage > page ? `translateY(-${progress * 100}px)` : undefined
+          currentPage > page ? `translateY(-${progress * 220}px)` : undefined
       }}
     >
       {children}
