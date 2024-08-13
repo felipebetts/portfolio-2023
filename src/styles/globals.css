@@ -5,6 +5,12 @@
 :root {
   --white: #f5f5f5;
 
+  --color-primary-100: #e5d8c7;
+  --color-primary-200: #8b913b;
+  --color-primary-300: #3c5233;
+  --color-primary-400: #1f331f;
+  --color-primary-500: #0d1f22;
+
   --max-w: 1440px;
 }
 
