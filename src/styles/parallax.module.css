@@ -1,15 +1,15 @@
 .container:nth-of-type(4n) {
-  background-color: #d91b1a;
+  background-color: var(--color-primary-500);
 }
 
 .container:nth-of-type(4n + 1) {
-  background-color: #3a568c;
+  background-color: var(--color-primary-200);
 }
 
 .container:nth-of-type(4n + 2) {
-  background-color: #4f8365;
+  background-color: var(--color-primary-300);
 }
 
 .container:nth-of-type(4n + 3) {
-  background-color: #670751;
+  background-color: var(--color-primary-400);
 }
