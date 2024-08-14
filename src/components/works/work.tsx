@@ -21,8 +21,8 @@ export const WorkContainer: React.FC<{ children: React.ReactNode }> = ({
 
 export const WorkBackground: React.FC = () => (
   <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen top-0 sticky">
-    <div className="bg-black text-[var(--white)] h-[30vh] lg:h-auto"></div>
-    <div className="bg-[var(--white)] h-[70vh] lg:min-h-screen"></div>
+    <div className="bg-[var(--color-primary-500)] text-[var(--white)] h-[30vh] lg:h-auto"></div>
+    <div className="bg-[var(--color-primary-100)] h-[70vh] lg:min-h-screen"></div>
   </div>
 )
 

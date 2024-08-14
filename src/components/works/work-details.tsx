@@ -10,7 +10,7 @@ interface Props {
 const WorkDetails: React.FC<Props> = ({ children, sub, title }) => {
   return (
     <div>
-      <header className="w-full max-w-[var(--max-w)] min-h-[30vh] bg-black flex flex-col justify-end mx-auto">
+      <header className="w-full max-w-[var(--max-w)] min-h-[30vh] bg-[var(--color-primary-500)] flex flex-col justify-end mx-auto">
         <div className="p-6">
           <Breadcrumbs />
           <h2 className="text-2xl mt-6 mb-4">{sub}</h2>

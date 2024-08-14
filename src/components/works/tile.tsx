@@ -11,6 +11,11 @@ interface BackgroundProps {
   children: React.ReactNode
 }
 
+interface ContentProps {
+  children: React.ReactNode
+  index: number
+}
+
 interface WrapperProps {
   children: React.ReactNode
   numOfPages: number
@@ -51,7 +56,7 @@ export const TileWrapper: React.FC<WrapperProps> = ({
     <TileContext.Provider value={{ numOfPages, currentPage }}>
       <div
         ref={containerRef}
-        className="relative bg-black text-white"
+        className="relative bg-[var(--color-primary-500)] text-[var(--color-primary-100)]"
         style={{
           height: numOfPages * 100 + 'vh'
         }}
@@ -66,8 +71,16 @@ export const TileBackground: React.FC<BackgroundProps> = ({ children }) => (
   <div className="absolute h-full w-full">{children}</div>
 )
 
-export const TileContent: React.FC<BackgroundProps> = ({ children }) => (
-  <div className="absolute h-full w-full overflow-hidden">{children}</div>
+export const TileContent: React.FC<ContentProps> = ({
+  children,
+  index = 0
+}) => (
+  <div
+    className="absolute h-full w-full overflow-hidden"
+    style={{ zIndex: index * 0.1 }}
+  >
+    {children}
+  </div>
 )
 
 export const TileContainer: React.FC<BackgroundProps> = ({ children }) => (
@@ -79,18 +92,26 @@ export const Tile: React.FC<TileProps> = ({ page, renderContent }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const progress = Math.max(0, currentPage - page)
 
+  // const opacity = 1
   let opacity = Math.min(1, Math.max(0, progress * 4))
   if (progress > 0.75 && page < numOfPages - 1) {
     opacity = Math.max(0, (1.0 - progress) * 4)
   }
 
+  let isCurrent = false
+
+  if (Math.round(Math.abs(currentPage - page)) == 0) {
+    isCurrent = true
+  }
+
   return (
     <div
       ref={containerRef}
-      className="absolute top-0 w-full"
+      className={'absolute top-0 w-full'}
       style={{
         pointerEvents: progress <= 0 || progress >= 1 ? 'none' : undefined,
-        opacity
+        opacity,
+        zIndex: isCurrent ? 20 : 0
       }}
     >
       {renderContent({ progress })}

@@ -1,33 +1,16 @@
-import React, { useCallback, useContext, useRef, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import Image from 'next/image'
 
-import { ScrollContext } from '@/utils/scroll-observer'
+import { ParallaxSinglePage } from './parallax'
 
 const Masthead: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState(false)
-  const { scrollY } = useContext(ScrollContext)
-
-  let progress = 0
-
-  const containerRef = useRef<HTMLDivElement>(null)
-  const { current: containerEl } = containerRef
-
-  if (containerEl) {
-    progress = Math.min(1, scrollY / containerEl.clientHeight)
-  }
-
   const handleImageLoaded = useCallback(() => {
     setImageLoaded(true)
   }, [])
 
   return (
-    <div
-      ref={containerRef}
-      className="min-h-screen sticky top-0 -z-10"
-      style={{
-        transform: `translateY(-${progress * 20}vh)`
-      }}
-    >
+    <ParallaxSinglePage>
       <video
         autoPlay
         loop
@@ -35,13 +18,19 @@ const Masthead: React.FC = () => {
         playsInline
         className="absolute w-full h-full object-cover -z-10"
       >
-        <source src="/videos/matrix-bg.mp4" type="video/mp4; codecs=hvc1" />
-        <source src="/videos/matrix-bg.webm" type="video/webm; codecs=vp9" />
+        <source src="/videos/oceano.mp4" type="video/mp4" />
+        {/* <source src="/videos/matrix-bg.mp4" type="video/mp4; codecs=hvc1" /> */}
+        {/* <source src="/videos/matrix-bg.webm" type="video/webm; codecs=vp9" /> */}
       </video>
-      <div className="min-h-screen h-full w-full flex flex-col justify-center items-center bg-black/40">
+      {/* <Image
+        src="/images/chill-roadtrip.webp"
+        fill
+        className="absolute w-full h-full object-cover -z-10"
+      /> */}
+      <div className="min-h-screen h-full w-full flex flex-col justify-center items-center bg-black/60">
         <div
           className={`
-                    p-12 font-bold z-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] text-center flex flex-1 items-center justify-center flex-col
+                    p-12 font-bold z-10 text-[var(--color-primary-100)] drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] text-center flex flex-1 items-center justify-center flex-col
                     transition-opacity duration-1000 ${
                       imageLoaded ? 'opacity-100' : 'opacity-0'
                     }
@@ -61,7 +50,7 @@ const Masthead: React.FC = () => {
           </h2>
         </div>
         <div
-          className={`flex-grow-0 pb-20 md:pb-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)]
+          className={`flex-grow-0 pb-20 md:pb-10 text-[var(--color-primary-100)] drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)]
              transition-all duration-1000 z-10 animate-bounce ${
                imageLoaded ? 'opacity-100' : 'opacity-0 -translate-y-10'
              }
@@ -83,7 +72,7 @@ const Masthead: React.FC = () => {
           </svg>
         </div>
       </div>
-    </div>
+    </ParallaxSinglePage>
   )
 }
 

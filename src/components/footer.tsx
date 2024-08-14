@@ -15,7 +15,7 @@ const links = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col gap-8 items-center justify-center bg-black text-white p-16 relative z-10">
+    <footer className="flex flex-col gap-8 items-center justify-center bg-[var(--color-primary-500)] text-[var(--color-primary-100)] p-16 relative z-10">
       <section className="flex gap-8 items-center justify-center">
         {links.map((link, i) => (
           <Link
