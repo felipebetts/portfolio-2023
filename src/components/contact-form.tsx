@@ -25,7 +25,7 @@ const Contact = () => {
     }
   }
   return (
-    <div className="bg-black text-white flex flex-col justify-center pt-10 min-h-[90vh] relative z-10">
+    <div className="bg-[var(--color-primary-500)] text-[var(--color-primary-100)] flex flex-col justify-center pt-10 min-h-[90vh] relative z-10">
       <div className="flex flex-1 flex-col justify-center items-center pt-10 lg:pt-6">
         <h2 className="text-4xl font-bold">Send me a message</h2>
         <form
@@ -39,7 +39,7 @@ const Contact = () => {
             maxLength={128}
             type="text"
             placeholder="Company Name"
-            className="bg-black text-white outline-none border-2 border-white rounded-md px-4 py-2"
+            className="bg-[var(--color-primary-500)] text-[var(--color-primary-100)] outline-none border-2 border-[var(--color-primary-100)] rounded-md px-4 py-2"
             value={name}
             onChange={e => setName(e.target.value)}
           />
@@ -50,7 +50,7 @@ const Contact = () => {
             maxLength={128}
             type="email"
             placeholder="Your Email"
-            className="bg-black text-white outline-none border-2 border-white rounded-md px-4 py-2"
+            className="bg-[var(--color-primary-500)] text-[var(--color-primary-100)] outline-none border-2 border-[var(--color-primary-100)] rounded-md px-4 py-2"
             value={from}
             onChange={e => setFrom(e.target.value)}
           />
@@ -60,14 +60,14 @@ const Contact = () => {
             placeholder="Additional information"
             required
             maxLength={1048576}
-            className="bg-black text-white outline-none border-2 border-white rounded-md px-4 py-2 min-h-[16em]"
+            className="bg-[var(--color-primary-500)] text-[var(--color-primary-100)] outline-none border-2 border-[var(--color-primary-100)] rounded-md px-4 py-2 min-h-[16em]"
             value={text}
             onChange={e => setText(e.target.value)}
           />
           <div className="text-center mt-10">
             <button
               type="submit"
-              className="bg-white text-black rounded-md px-4 py-2"
+              className="bg-[var(--color-primary-100)] text-black rounded-md px-4 py-2"
             >
               Send
             </button>

@@ -22,8 +22,8 @@ body {
 }
 
 body {
-  background: black;
-  color: var(--white);
+  background: var(--color-primary-500);
+  color: var(--color-primary-100);
 }
 
 /* :root {

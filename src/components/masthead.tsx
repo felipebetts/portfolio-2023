@@ -30,7 +30,7 @@ const Masthead: React.FC = () => {
       <div className="min-h-screen h-full w-full flex flex-col justify-center items-center bg-black/60">
         <div
           className={`
-                    p-12 font-bold z-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] text-center flex flex-1 items-center justify-center flex-col
+                    p-12 font-bold z-10 text-[var(--color-primary-100)] drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] text-center flex flex-1 items-center justify-center flex-col
                     transition-opacity duration-1000 ${
                       imageLoaded ? 'opacity-100' : 'opacity-0'
                     }
@@ -50,7 +50,7 @@ const Masthead: React.FC = () => {
           </h2>
         </div>
         <div
-          className={`flex-grow-0 pb-20 md:pb-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)]
+          className={`flex-grow-0 pb-20 md:pb-10 text-[var(--color-primary-100)] drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)]
              transition-all duration-1000 z-10 animate-bounce ${
                imageLoaded ? 'opacity-100' : 'opacity-0 -translate-y-10'
              }

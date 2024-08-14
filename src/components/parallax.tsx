@@ -51,7 +51,7 @@ export const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
     <ParallaxContext.Provider value={{ pagesAmount, currentPage }}>
       <div
         ref={containerRef}
-        className="relative bg-black text-white"
+        className="relative bg-[var(--color-primary-500)] text-[var(--color-primary-100)]"
         style={{
           height: pagesAmount * 100 + 'vh'
         }}
