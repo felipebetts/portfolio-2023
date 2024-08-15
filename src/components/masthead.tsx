@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react'
 import Image from 'next/image'
 
 import { ParallaxSinglePage } from './parallax'
+import SocialLinks from './social-links'
 
 const Masthead: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState(false)
@@ -19,14 +20,7 @@ const Masthead: React.FC = () => {
         className="absolute w-full h-full object-cover -z-10"
       >
         <source src="/videos/oceano.mp4" type="video/mp4" />
-        {/* <source src="/videos/matrix-bg.mp4" type="video/mp4; codecs=hvc1" /> */}
-        {/* <source src="/videos/matrix-bg.webm" type="video/webm; codecs=vp9" /> */}
       </video>
-      {/* <Image
-        src="/images/chill-roadtrip.webp"
-        fill
-        className="absolute w-full h-full object-cover -z-10"
-      /> */}
       <div className="min-h-screen h-full w-full flex flex-col justify-center items-center bg-black/60">
         <div
           className={`
@@ -46,8 +40,9 @@ const Masthead: React.FC = () => {
           />
           <h1 className="mb-6 text-4xl xl:text-5xl">Felipe Betts</h1>
           <h2 className="mb-2 text-2xl xl:text-3xl -tracking-tight">
-            <span>Software Developer</span>
+            Software Developer
           </h2>
+          <SocialLinks />
         </div>
         <div
           className={`flex-grow-0 pb-20 md:pb-10 text-[var(--color-primary-100)] drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)]
