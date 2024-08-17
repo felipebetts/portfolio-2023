@@ -46,6 +46,7 @@ export const WorkLeft: React.FC<SideProps> = ({ children, progress }) => {
 
 export const WorkRight: React.FC<SideProps> = ({ children, progress }) => {
   let translateY = Math.max(-50, -(progress - 0.5) * 50)
+  // let translateY = 0
 
   return (
     <div
@@ -54,7 +55,7 @@ export const WorkRight: React.FC<SideProps> = ({ children, progress }) => {
         transform: `translateY(${translateY}px)`
       }}
     >
-      <div className="w-full max-w-md pt-10 lg:pt-0 px-10 md:px-0 flex items-center justify-center">
+      <div className="w-full max-w-2xl pt-10 lg:pt-0 px-10 md:px-0 flex items-center justify-center">
         {children}
       </div>
     </div>
