@@ -1,5 +1,5 @@
-import LazyImage from '@/components/lazy-image'
-import WorkDetails from '@/components/works/work-details'
+import LazyImage from '@/components/shared/lazy-image'
+import WorkDetails from '@/components/layout/works/work-details'
 import Image from 'next/image'
 import React from 'react'
 

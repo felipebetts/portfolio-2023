@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import Image from 'next/image'
 
-import { ParallaxSinglePage } from './parallax'
+import { ParallaxSinglePage } from '@/components/shared/parallax'
 import SocialLinks from './social-links'
 
 const Masthead: React.FC = () => {

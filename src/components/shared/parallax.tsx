@@ -1,6 +1,6 @@
 import { ScrollContext } from '@/utils/scroll-observer'
 import { createContext, useContext, useRef } from 'react'
-import s from '../styles/parallax.module.css'
+import s from '@/styles/parallax.module.css'
 
 interface ParallaxContextValue {
   pagesAmount: number

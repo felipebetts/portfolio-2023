@@ -1,4 +1,4 @@
-import WorkDetails from '@/components/works/work-details'
+import WorkDetails from '@/components/layout/works/work-details'
 import React from 'react'
 
 const Onefan: React.FC = () => {

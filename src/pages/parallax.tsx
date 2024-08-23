@@ -4,7 +4,7 @@ import {
   ParallaxContainer,
   ParallaxSinglePage,
   ParallaxWrapper
-} from '@/components/parallax'
+} from '@/components/shared/parallax'
 
 const pages = [1, 2, 3, 4]
 

@@ -1,10 +1,10 @@
-import Contact from '@/components/contact-form'
-import About from '@/components/about'
-import Masthead from '@/components/masthead'
-import Works from '@/components/works/works'
+import Contact from '@/components/layout/contact-form'
+import About from '@/components/layout/about'
+import Masthead from '@/components/layout/masthead'
+import Works from '@/components/layout/works/works'
 import Head from 'next/head'
 import React from 'react'
-import Footer from '@/components/footer'
+import Footer from '@/components/layout/footer'
 
 const Home: React.FC = () => {
   return (

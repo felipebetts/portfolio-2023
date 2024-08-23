@@ -1,4 +1,4 @@
-import Footer from '@/components/footer'
+import Footer from '@/components/layout/footer'
 import '@/styles/globals.css'
 import ScrollObserver from '@/utils/scroll-observer'
 import type { AppProps } from 'next/app'
