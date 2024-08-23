@@ -10,11 +10,18 @@ const blockOpacity = (sectionProgress: number, blockNo: number) => {
   return opacity
 }
 
+// const blocks: string[] = [
+//   'Hello, welcome to this website!',
+//   "I'm a curious fullstack web developer who's always eager to explore new technologies and programming languages.",
+//   'Using my experience in React, Next.js and Node, I craft interactive and responsive web applications.',
+//   'My goal is to deliver solutions that are both efficient and aesthetically pleasing.'
+// ]
+
 const blocks: string[] = [
-  'Hello, welcome to this website!',
-  "I'm a curious fullstack web developer who's always eager to explore new technologies and programming languages.",
-  'Using my experience in React, Next.js and Node, I craft interactive and responsive web applications.',
-  'My goal is to deliver solutions that are both efficient and aesthetically pleasing.'
+  'Built applications with over 100.000 monthly users.',
+  'Lead front-end development teams on projects with global reach.',
+  'Delivered end-to-end solutions to freelance clients, including project, creation and deployment.',
+  "These are some of the projects I've worked on:"
 ]
 
 const About: React.FC = () => {
