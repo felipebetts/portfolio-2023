@@ -17,35 +17,38 @@ import Image from 'next/image'
 
 const workList = [
   {
-    sub: 'Lead',
+    sub: '',
     main: (
-      <span>
-        the Front-End team at <WorkLink href="/works/onefan">OneFan</WorkLink>
-      </span>
+      <>
+        The official website of an{' '}
+        <WorkLink href="/works/onefan">European Footbal Club</WorkLink>
+      </>
     ),
     image: '/images/onefan/notebook.png',
     video: '/videos/oceano.mp4'
   },
   {
-    sub: 'Built',
+    sub: '',
     main: (
       <>
-        a{' '}
-        <WorkLink href="/works/digital-bank">digital bank&apos;s MVP</WorkLink>
+        a known brazilian{' '}
+        <WorkLink href="/works/hurb">online travel agency</WorkLink>
+      </>
+    ),
+    image: '/images/hurb/notebook.png'
+  },
+  {
+    sub: '',
+    main: (
+      <>
+        a Fintech&apos;s{' '}
+        <WorkLink href="/works/digital-bank">digital banking platform</WorkLink>
       </>
     ),
     image: '/images/notebook.png',
     video: '/videos/oceano.mp4'
-  }
-  // {
-  //   sub: 'Worked at',
-  //   main: (
-  //     <>
-  //       <WorkLink href="/works/hurb">Hurb</WorkLink> as a Software Engineer
-  //     </>
-  //   ),
-  //   image: '/images/hurb/notebook.png'
-  // },
+  },
+
   // {
   //   sub: 'Crafted',
   //   main: (
@@ -58,15 +61,16 @@ const workList = [
   //   ),
   //   image: '/images/orcamento_express/notebook.png'
   // },
-  // {
-  //   sub: 'and',
-  //   main: (
-  //     <>
-  //       <WorkLink href="/works">more projects</WorkLink>
-  //     </>
-  //   ),
-  //   image: '/images/notebook.png'
-  // }
+  {
+    sub: '',
+    main: (
+      <>
+        and <WorkLink href="/works">more projects</WorkLink>
+      </>
+    ),
+    image: '/images/notebook.png',
+    video: '/videos/oceano.mp4'
+  }
 ]
 
 const Works = () => {
@@ -84,13 +88,13 @@ const Works = () => {
                 <WorkContainer>
                   <WorkLeft progress={progress}>
                     <div>{el.sub}</div>
-                    <div className="text-axl md:text-5xl font-semibold tracking-tight">
+                    <div className="text-axl md:text-5xl font-semibold tracking-tight px-4">
                       {el.main}
                     </div>
                   </WorkLeft>
                   <WorkRight progress={progress}>
                     <div className="relative h-full w-full">
-                      <div className="absolute h-[45.5%] w-[75.25%] left-[12.6%] top-[2%] lg:h-[65.5%] lg:top-[4%]">
+                      <div className="absolute h-[55.5%] w-[75.25%] left-[12.6%] top-[2%] lg:h-[65.5%] lg:top-[4%] aspect-[672/485]">
                         <video
                           autoPlay
                           loop

@@ -13,7 +13,6 @@ interface BackgroundProps {
 
 interface ContentProps {
   children: React.ReactNode
-  index: number
 }
 
 interface WrapperProps {
@@ -71,16 +70,8 @@ export const TileBackground: React.FC<BackgroundProps> = ({ children }) => (
   <div className="absolute h-full w-full">{children}</div>
 )
 
-export const TileContent: React.FC<ContentProps> = ({
-  children,
-  index = 0
-}) => (
-  <div
-    className="absolute h-full w-full overflow-hidden"
-    style={{ zIndex: index * 0.1 }}
-  >
-    {children}
-  </div>
+export const TileContent: React.FC<ContentProps> = ({ children }) => (
+  <div className="absolute h-full w-full overflow-hidden">{children}</div>
 )
 
 export const TileContainer: React.FC<BackgroundProps> = ({ children }) => (
