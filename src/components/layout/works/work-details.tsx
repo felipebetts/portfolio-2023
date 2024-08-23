@@ -1,5 +1,5 @@
 import React from 'react'
-import Breadcrumbs from '../breadcrumbs'
+import Breadcrumbs from '../../shared/breadcrumbs'
 
 interface Props {
   children: React.ReactNode
