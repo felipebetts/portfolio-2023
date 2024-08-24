@@ -1,0 +1,21 @@
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(
+      30px
+    ); /* Ajuste para controlar a direção do slide (Y = vertical, X = horizontal) */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Classe para o objeto que será animado */
+.animate_enter {
+  opacity: 0; /* Garante que o elemento comece invisível */
+  animation: slideFadeIn 0.6s ease-out forwards;
+  /* 0.6s: Duração da animação
+       ease-out: Suavização da animação
+       forwards: Mantém o estado final da animação */
+}
