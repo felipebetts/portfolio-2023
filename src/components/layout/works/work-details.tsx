@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Breadcrumbs from '../../shared/breadcrumbs'
 import s from '@/styles/animations.module.css'
 
