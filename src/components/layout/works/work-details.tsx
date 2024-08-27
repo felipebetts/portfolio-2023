@@ -11,18 +11,18 @@ interface Props {
 const WorkDetails: React.FC<Props> = ({ children, sub, title }) => {
   return (
     <div>
-      <header className="w-full max-w-[var(--max-w)] min-h-[27.5vh] bg-[var(--color-primary-500)] flex flex-col justify-between mx-auto">
-        <div className="p-6">
+      <header className="w-full max-w-[var(--max-w)] min-h-[22.5vh] md:min-h-[27.5vh] flex flex-col justify-between mx-auto">
+        <div className="p-4 md:p-6">
           <Breadcrumbs />
         </div>
-        <div className="p-6">
-          {sub && <h2 className="text-2xl mb-4">{sub}</h2>}
-          {title && <h1 className="text-6xl">{title}</h1>}
+        <div className={`p-4 md:p-6 ${s.opacity_enter}`}>
+          {sub && <h2 className="text-xl md:text-2xl mb-2 md:mb-4">{sub}</h2>}
+          {title && <h1 className="text-4xl md:text-6xl">{title}</h1>}
         </div>
       </header>
       <main className="w-full bg-[var(--color-primary-100)] text-black">
         <article
-          className={`w-full max-w-[var(--max-w)] mx-auto p-6 ${s.animate_enter}`}
+          className={`w-full max-w-[var(--max-w)] mx-auto p-4 md:p-6 ${s.slide_enter}`}
         >
           {children}
         </article>

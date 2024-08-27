@@ -47,7 +47,7 @@ const WorksPage = () => {
               href={item.href}
               className="w-full flex flex-col justify-center items-center"
             >
-              <div className="relative w-full h-48 aspect-[16/9]">
+              <div className="relative w-full h-auto aspect-[16/10]">
                 <Image
                   //   height={1227.5}
                   //   width={730}

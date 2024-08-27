@@ -3,7 +3,7 @@ import React from 'react'
 
 const Hurb: React.FC = () => {
   return (
-    <WorkDetails sub="Hurb" title="Software Developer">
+    <WorkDetails sub="Hurb" title="Online Travel Agency">
       teste
     </WorkDetails>
   )

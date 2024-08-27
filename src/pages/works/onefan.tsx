@@ -3,7 +3,7 @@ import React from 'react'
 
 const Onefan: React.FC = () => {
   return (
-    <WorkDetails sub="Onefan" title="Front-End Developer - Tech Lead">
+    <WorkDetails sub="Onefan" title="Osasuna's Official Website">
       teste
     </WorkDetails>
   )

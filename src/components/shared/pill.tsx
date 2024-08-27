@@ -6,9 +6,9 @@ interface Props {
 
 const Pill: React.FC<Props> = ({ children }) => {
   return (
-    <span className="uppercase leading-tight bg-[var(--color-primary-500)] text-[var(--color-primary-200)] text-sm px-2 rounded-sm">
+    <div className="bg-[var(--color-primary-500)] text-[var(--color-primary-200)] leading-tight uppercase font-bold text-sm rounded-sm py-1 px-2 my-2">
       {children}
-    </span>
+    </div>
   )
 }
 

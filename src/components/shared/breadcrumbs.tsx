@@ -15,7 +15,7 @@ const Breadcrumbs = () => {
           </p>
         ) : i == 0 ? (
           <div className="flex items-center gap-1" key={`segment${i}`}>
-            <Link href="/" className="p-2 hover:opacity-80">
+            <Link href="/" className="p-2 pl-0">
               <IoHomeSharp />
             </Link>
             <IoCaretForward />
@@ -24,7 +24,7 @@ const Breadcrumbs = () => {
           <div className="flex items-center gap-1" key={`segment${i}`}>
             <Link
               href={route.slice(0, i + 1).join('/')}
-              className="p-2 hover:opacity-80"
+              className="p-2 hover:underline underline-offset-4"
             >
               {segment}
             </Link>
