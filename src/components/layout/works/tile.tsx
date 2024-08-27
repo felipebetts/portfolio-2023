@@ -91,7 +91,7 @@ export const Tile: React.FC<TileProps> = ({ page, renderContent }) => {
 
   let isCurrent = false
 
-  if (Math.round(Math.abs(currentPage - page)) == 0) {
+  if (Math.round(Math.abs(currentPage - page - 0.5)) == 0) {
     isCurrent = true
   }
 
