@@ -1,7 +1,9 @@
 import React from 'react'
-import WorkDetails from '@/components/layout/works/work-details'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import s from '@/styles/works.module.css'
+import WorkDetails from '@/components/layout/works/work-details'
 
 const works = [
   {
@@ -42,23 +44,21 @@ const WorksPage = () => {
       <div className="w-full max-w-[var(--max-w)] py-2 md:py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-12">
           {works.map((item, i) => (
-            <Link
-              key={i}
-              href={item.href}
-              className="w-full flex flex-col justify-center items-center"
-            >
-              <div className="relative w-full h-auto aspect-[16/10]">
-                <Image
-                  //   height={1227.5}
-                  //   width={730}
-                  fill
-                  src={item.image}
-                  alt={item.title}
-                  className="object-cover rounded-md shadow-xl"
-                />
+            <Link key={i} href={item.href}>
+              <div
+                className={`w-full flex flex-col justify-center items-center ${s.work_card}`}
+              >
+                <div className="relative w-full h-auto aspect-[16/10] overflow-hidden rounded-md shadow-xl">
+                  <Image
+                    fill
+                    src={item.image}
+                    alt={item.title}
+                    className="object-cover transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="font-semibold text-xl mt-2">{item.title}</h3>
+                {/* <h4>{item.sub}</h4> */}
               </div>
-              <h3 className="font-semibold text-xl mt-2">{item.title}</h3>
-              {/* <h4>{item.sub}</h4> */}
             </Link>
           ))}
         </div>
