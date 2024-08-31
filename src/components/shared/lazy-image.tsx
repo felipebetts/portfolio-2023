@@ -13,12 +13,12 @@ interface Props {
 const LazyImage: React.FC<Props> = ({ alt, className, height, src, width }) => {
   const [imageLoaded, setImageLoaded] = useState(false)
 
-  const handleImageLoaded = useCallback(() => {
+  const handleImageLoaded = () => {
     setImageLoaded(true)
-  }, [])
+  }
 
   return (
-    <div className={clsx('relative', className)}>
+    <div className={clsx('relative mx-auto', className)}>
       <div
         className={clsx(
           'absolute top-0 h-full w-full',
