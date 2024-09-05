@@ -15,11 +15,11 @@ const Donations = () => {
         as pet shops, veterinary clinics, etc.
       </p>
       <LazyImage
-        height={900}
-        width={1600}
+        height={360}
+        width={640}
         alt="cover"
         src="/images/ajudapet/cover.png"
-        className="my-4"
+        className="my-6 mx-auto"
       />
       {/* <div className="relative w-full h-96 my-4">
         <Image
@@ -42,11 +42,11 @@ const Donations = () => {
         forwarded to the payment of the donation.
       </p>
       <LazyImage
-        height={900}
-        width={1600}
+        height={360}
+        width={640}
         src="/images/ajudapet/3.png"
         alt="donations agreggator"
-        className="my-4"
+        className="my-6 mx-auto"
       />
 
       <p className="my-2">
@@ -60,11 +60,11 @@ const Donations = () => {
       </p>
 
       <LazyImage
-        height={900}
-        width={1600}
+        height={360}
+        width={640}
         alt="donations agreggator"
         src="/images/ajudapet/4.png"
-        className="my-4"
+        className="my-6 mx-auto"
       />
 
       <p className="my-2">
@@ -75,11 +75,11 @@ const Donations = () => {
       </p>
 
       <LazyImage
-        height={900}
-        width={1600}
+        height={360}
+        width={640}
         src="/images/ajudapet/5.png"
         alt="donations agreggator"
-        className="my-4"
+        className="my-6 mx-auto"
       />
       <p className="my-2">
         For payment by credit card, a transparent checkout was implemented
@@ -91,36 +91,36 @@ const Donations = () => {
       </p>
 
       <LazyImage
-        height={900}
-        width={1600}
+        height={360}
+        width={640}
         alt="donations agreggator"
         src="/images/ajudapet/6.png"
-        className="my-4"
+        className="my-6 mx-auto"
       />
       <p className="my-2">
         Payment by PIX is also possible, which can be done via qr code or copy
         and paste link. Both are generated after the user enters some more data.
       </p>
       <LazyImage
-        height={900}
-        width={1600}
+        height={360}
+        width={640}
         src="/images/ajudapet/7.png"
         alt="donations agreggator"
-        className="my-4"
+        className="my-6 mx-auto"
       />
       <LazyImage
-        height={900}
-        width={1600}
+        height={360}
+        width={640}
         src="/images/ajudapet/8.png"
         alt="donations agreggator"
-        className="my-4"
+        className="my-6 mx-auto"
       />
       <LazyImage
-        height={900}
-        width={1600}
+        height={360}
+        width={640}
         src="/images/ajudapet/9.png"
         alt="donations agreggator"
-        className="my-4"
+        className="my-6 mx-auto"
       />
     </WorkDetails>
   )
