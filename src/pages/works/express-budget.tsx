@@ -5,17 +5,13 @@ import { IoExitOutline } from 'react-icons/io5'
 import WorkDetails from '@/components/layout/works/work-details'
 import LazyImage from '@/components/shared/lazy-image'
 import PillData from '@/components/shared/pill-data'
+import { WorkImage } from '@/components/layout/works/work'
 
 const ExpressBudget = () => {
   return (
     <WorkDetails sub="iBuild" title="Express Budget">
       <section className="py-3">
-        <LazyImage
-          height={600}
-          width={1200}
-          alt="cover"
-          src="/images/orcamento_express/cover.png"
-        />
+        <WorkImage alt="cover" src="/images/orcamento_express/cover.png" />
       </section>
       <section className="py-3">
         <PillData tag="Link">
@@ -47,26 +43,14 @@ const ExpressBudget = () => {
           generate leads with loads of data about the clients, and to optimize
           the budgeting department&apos;s time.
         </p>
-        <LazyImage
-          height={600}
-          width={1200}
-          alt="cover"
-          src="/images/orcamento_express/2.png"
-          className="my-6"
-        />
+        <WorkImage alt="cover" src="/images/orcamento_express/2.png" />
         <p className="my-2">
           Based on the user&apos;s input of their income and other financial
           parameters, it performs a mortgage simulation. With that, it generates
           the average value of the mortgage, wich will be used as the maximum
           budget for the house construction.
         </p>
-        <LazyImage
-          height={600}
-          width={1200}
-          alt="cover"
-          src="/images/orcamento_express/1.png"
-          className="my-6"
-        />
+        <WorkImage alt="cover" src="/images/orcamento_express/1.png" />
         <p className="my-2">
           After the financial part, the user is then redirected to an
           interactive form, where he/she will choose house styles, number of
@@ -74,13 +58,7 @@ const ExpressBudget = () => {
           user is able to see how much of the budget is already allocated and
           how much of it is still available.
         </p>
-        <LazyImage
-          height={600}
-          width={1200}
-          alt="cover"
-          src="/images/orcamento_express/3.png"
-          className="my-6"
-        />
+        <WorkImage alt="cover" src="/images/orcamento_express/3.png" />
         <p className="my-2">
           At the end, the user is asked for contact information in order to have
           access to the final report. By my client&apos;s request, this data is

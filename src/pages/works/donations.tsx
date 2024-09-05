@@ -1,3 +1,4 @@
+import { WorkImage } from '@/components/layout/works/work'
 import WorkDetails from '@/components/layout/works/work-details'
 import LazyImage from '@/components/shared/lazy-image'
 import Image from 'next/image'
@@ -14,13 +15,7 @@ const Donations = () => {
         it was also requested that it be possible to have multiple donors, such
         as pet shops, veterinary clinics, etc.
       </p>
-      <LazyImage
-        height={360}
-        width={640}
-        alt="cover"
-        src="/images/ajudapet/cover.png"
-        className="my-6 mx-auto"
-      />
+      <WorkImage alt="cover" src="/images/ajudapet/cover.png" />
       {/* <div className="relative w-full h-96 my-4">
         <Image
           src="/images/ajudapet/2.png"
@@ -41,13 +36,7 @@ const Donations = () => {
         user to enter the received token. If the token is valid, the user is
         forwarded to the payment of the donation.
       </p>
-      <LazyImage
-        height={360}
-        width={640}
-        src="/images/ajudapet/3.png"
-        alt="donations agreggator"
-        className="my-6 mx-auto"
-      />
+      <WorkImage src="/images/ajudapet/3.png" alt="donations agreggator" />
 
       <p className="my-2">
         As part of the customer order, SMS authentication should generate/login
@@ -59,13 +48,7 @@ const Donations = () => {
         existing system was a considerable technical challenge. */}
       </p>
 
-      <LazyImage
-        height={360}
-        width={640}
-        alt="donations agreggator"
-        src="/images/ajudapet/4.png"
-        className="my-6 mx-auto"
-      />
+      <WorkImage alt="donations agreggator" src="/images/ajudapet/4.png" />
 
       <p className="my-2">
         After this step, payment will be made. Through the integration of the
@@ -74,13 +57,7 @@ const Donations = () => {
         transfer)
       </p>
 
-      <LazyImage
-        height={360}
-        width={640}
-        src="/images/ajudapet/5.png"
-        alt="donations agreggator"
-        className="my-6 mx-auto"
-      />
+      <WorkImage src="/images/ajudapet/5.png" alt="donations agreggator" />
       <p className="my-2">
         For payment by credit card, a transparent checkout was implemented
         within the website. This was achieved by integrating the payments API
@@ -90,38 +67,14 @@ const Donations = () => {
         API.
       </p>
 
-      <LazyImage
-        height={360}
-        width={640}
-        alt="donations agreggator"
-        src="/images/ajudapet/6.png"
-        className="my-6 mx-auto"
-      />
+      <WorkImage alt="donations agreggator" src="/images/ajudapet/6.png" />
       <p className="my-2">
         Payment by PIX is also possible, which can be done via qr code or copy
         and paste link. Both are generated after the user enters some more data.
       </p>
-      <LazyImage
-        height={360}
-        width={640}
-        src="/images/ajudapet/7.png"
-        alt="donations agreggator"
-        className="my-6 mx-auto"
-      />
-      <LazyImage
-        height={360}
-        width={640}
-        src="/images/ajudapet/8.png"
-        alt="donations agreggator"
-        className="my-6 mx-auto"
-      />
-      <LazyImage
-        height={360}
-        width={640}
-        src="/images/ajudapet/9.png"
-        alt="donations agreggator"
-        className="my-6 mx-auto"
-      />
+      <WorkImage src="/images/ajudapet/7.png" alt="donations agreggator" />
+      <WorkImage src="/images/ajudapet/8.png" alt="donations agreggator" />
+      <WorkImage src="/images/ajudapet/9.png" alt="donations agreggator" />
     </WorkDetails>
   )
 }

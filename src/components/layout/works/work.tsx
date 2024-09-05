@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import LazyImage from '@/components/shared/lazy-image'
 
 interface LinkProps {
   children: React.ReactNode
@@ -9,6 +11,11 @@ interface LinkProps {
 interface SideProps {
   children: React.ReactNode
   progress: number
+}
+
+interface ImageProps {
+  src: string
+  alt: string
 }
 
 export const WorkContainer: React.FC<{ children: React.ReactNode }> = ({
@@ -66,4 +73,14 @@ export const WorkLink: React.FC<LinkProps> = ({ href, children }) => (
   <Link href={href} className="underline underline-offset-8 decoration-1">
     {children}
   </Link>
+)
+
+export const WorkImage: React.FC<ImageProps> = ({ alt, src }) => (
+  <LazyImage
+    alt={alt}
+    src={src}
+    height={360}
+    width={640}
+    className="my-6 mx-auto"
+  />
 )

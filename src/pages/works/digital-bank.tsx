@@ -2,20 +2,15 @@ import React from 'react'
 import Link from 'next/link'
 import { IoExitOutline } from 'react-icons/io5'
 
-import LazyImage from '@/components/shared/lazy-image'
 import WorkDetails from '@/components/layout/works/work-details'
 import PillData from '@/components/shared/pill-data'
+import { WorkImage } from '@/components/layout/works/work'
 
 const DigitalBank = () => {
   return (
     <WorkDetails sub="Valepay" title="Digital Bank">
       <section className="py-3">
-        <LazyImage
-          alt="cover"
-          src="/images/valepay/1.jpg"
-          height={600}
-          width={1200}
-        />
+        <WorkImage alt="cover" src="/images/valepay/1.jpg" />
       </section>
       <section className="py-3">
         <PillData tag="Link">
