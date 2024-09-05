@@ -28,7 +28,7 @@ const works = [
     title: 'Construction Budget Simulator',
     sub: 'iBuild Construtora',
     image: '/images/orcamento_express/cover.png',
-    href: '/works/onefan'
+    href: '/works/express-budget'
   },
   {
     title: 'Donations Agreggator',
