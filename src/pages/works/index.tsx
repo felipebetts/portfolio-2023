@@ -12,6 +12,12 @@ const works = [
     image: '/images/onefan/osasuna-home.png',
     href: '/works/onefan'
   },
+  // {
+  //   title: 'FitDance Sales Page',
+  //   sub: 'OneFan',
+  //   image: '/images/onefan/osasuna-home.png',
+  //   href: '/works/onefan'
+  // },
   {
     title: 'Online Tourism Agency',
     sub: 'Hurb',
@@ -56,7 +62,9 @@ const WorksPage = () => {
                     className="object-cover transition-transform duration-300"
                   />
                 </div>
-                <h3 className="font-semibold text-xl mt-2">{item.title}</h3>
+                <h3 className="font-semibold text-xl mt-2 text-center">
+                  {item.title}
+                </h3>
                 {/* <h4>{item.sub}</h4> */}
               </div>
             </Link>
