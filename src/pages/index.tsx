@@ -16,7 +16,6 @@ const Home: React.FC = () => {
           name="description"
           content="Hello! I'm a Software Developer from Brazil"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Masthead />
       <Profile />
