@@ -1,0 +1,35 @@
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(
+      20px
+    ); /* Ajuste para controlar a direção do slide (Y = vertical, X = horizontal) */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Classe para o objeto que será animado */
+.slide_enter {
+  opacity: 0; /* Garante que o elemento comece invisível */
+  animation: slideFadeIn 0.4s ease-out forwards;
+  /* 0.4s: Duração da animação
+       ease-out: Suavização da animação
+       forwards: Mantém o estado final da animação */
+}
+
+.opacity_enter {
+  opacity: 0;
+  animation: fadeIn 0.4s ease-out forwards;
+}

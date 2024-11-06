@@ -45,8 +45,8 @@ const workList = [
         <WorkLink href="/works/digital-bank">digital banking platform</WorkLink>
       </>
     ),
-    image: '/images/notebook.png',
-    video: '/videos/oceano.mp4'
+    image: '/images/notebook.png'
+    // video: '/videos/oceano.mp4'
   },
 
   // {
@@ -68,8 +68,8 @@ const workList = [
         and <WorkLink href="/works">more projects</WorkLink>
       </>
     ),
-    image: '/images/notebook.png',
-    video: '/videos/oceano.mp4'
+    image: '/images/notebook.png'
+    // video: '/videos/oceano.mp4'
   }
 ]
 

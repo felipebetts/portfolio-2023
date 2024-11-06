@@ -11,7 +11,7 @@
   --color-primary-400: #1f331f;
   --color-primary-500: #0d1f22;
 
-  --max-w: 1440px;
+  --max-w: 1024px;
 }
 
 html,
@@ -24,6 +24,10 @@ body {
 body {
   background: var(--color-primary-500);
   color: var(--color-primary-100);
+}
+
+*::selection {
+  background: var(--color-primary-200);
 }
 
 /* :root {

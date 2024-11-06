@@ -1,9 +1,17 @@
 import Link from 'next/link'
 import React from 'react'
+import { clsx } from 'clsx'
+
+import s from '@/styles/animations.module.css'
 
 const NotFound = () => {
   return (
-    <main className="min-h-[75vh] w-full flex flex-col gap-8 items-center justify-center py-6 px-4">
+    <main
+      className={clsx(
+        'min-h-[75vh] w-full flex flex-col gap-8 items-center justify-center py-6 px-4',
+        s.slide_enter
+      )}
+    >
       <h1 className="mb-6 text-4xl xl:text-5xl">Page Not Found</h1>
       <video
         src="/videos/drink-water.mp4"
