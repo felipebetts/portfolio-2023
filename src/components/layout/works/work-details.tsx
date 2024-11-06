@@ -12,7 +12,7 @@ interface Props {
 const WorkDetails: React.FC<Props> = ({ children, sub, title }) => {
   return (
     <div>
-      <header className="w-full max-w-[var(--max-w)] min-h-[22.5vh] md:min-h-[27.5vh] flex flex-col justify-between mx-auto">
+      <header className="w-full max-w-[var(--max-w)] min-h-[20vh] md:min-h-[22.5vh] flex flex-col justify-between mx-auto">
         <div className="p-4 md:p-6">
           <Breadcrumbs />
         </div>
