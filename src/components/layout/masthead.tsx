@@ -25,9 +25,7 @@ const Masthead: React.FC = () => {
         <div
           className={`
                     p-12 font-bold z-10 text-[var(--color-primary-100)] drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] text-center flex flex-1 items-center justify-center flex-col
-                    transition-opacity duration-1000 ${
-                      imageLoaded ? 'opacity-100' : 'opacity-0'
-                    }
+                    
           `}
         >
           <Image
@@ -36,7 +34,9 @@ const Masthead: React.FC = () => {
             height={144}
             alt="Profile picture"
             onLoad={handleImageLoaded}
-            className="rounded-full drop-shadow-2xl mb-6"
+            className={`rounded-full drop-shadow-2xl mb-6 transition-opacity duration-1000 ${
+              imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
           />
           <h1 className="mb-6 text-4xl xl:text-5xl">Felipe Betts</h1>
           <h2 className="mb-2 text-2xl xl:text-3xl -tracking-tight">
