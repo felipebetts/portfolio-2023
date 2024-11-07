@@ -24,8 +24,7 @@ const workList = [
         <WorkLink href="/works/onefan">European Footbal Club</WorkLink>
       </>
     ),
-    image: '/images/onefan/notebook.png',
-    video: '/videos/oceano.mp4'
+    image: '/images/onefan/notebook.png'
   },
   {
     sub: '',
@@ -45,8 +44,7 @@ const workList = [
         <WorkLink href="/works/digital-bank">digital banking platform</WorkLink>
       </>
     ),
-    image: '/images/notebook.png'
-    // video: '/videos/oceano.mp4'
+    image: '/images/valepay/notebook.png'
   },
 
   // {
@@ -68,8 +66,7 @@ const workList = [
         and <WorkLink href="/works">more projects</WorkLink>
       </>
     ),
-    image: '/images/notebook.png'
-    // video: '/videos/oceano.mp4'
+    image: '/images/orcamento_express/notebook.png'
   }
 ]
 
@@ -94,7 +91,7 @@ const Works = () => {
                   </WorkLeft>
                   <WorkRight progress={progress}>
                     <div className="relative h-full w-full">
-                      <div className="absolute h-[55.5%] w-[75.25%] left-[12.6%] top-[2%] lg:h-[65.5%] lg:top-[4%] aspect-[672/485]">
+                      {/* <div className="absolute h-[55.5%] w-[75.25%] left-[12.6%] top-[2%] lg:h-[65.5%] lg:top-[4%] aspect-[672/485]">
                         <video
                           autoPlay
                           loop
@@ -104,7 +101,7 @@ const Works = () => {
                         >
                           <source src={el.video} type="video/mp4" />
                         </video>
-                      </div>
+                      </div> */}
                       <Image
                         src={el.image}
                         width={1260}
