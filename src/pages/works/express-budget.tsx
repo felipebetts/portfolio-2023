@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { IoExitOutline } from 'react-icons/io5'
 
 import WorkDetails from '@/components/layout/works/work-details'
-import LazyImage from '@/components/shared/lazy-image'
 import PillData from '@/components/shared/pill-data'
 import { WorkImage } from '@/components/layout/works/work'
 
@@ -32,7 +31,89 @@ const ExpressBudget = () => {
         </PillData>
       </section>
       <section className="py-3">
-        <p className="my-2">
+        <p className="text-lg mb-6">
+          Express Budget is a web-based application designed to help businesses
+          optimize their lead qualification process by providing an interactive
+          and visual budget simulation experience. The platform enables users to
+          input key financial parameters and receive instant budget estimates,
+          allowing potential clients to understand pricing structures before
+          reaching out to sales representatives. This approach helps companies
+          filter out unqualified leads, improving conversion rates and
+          operational efficiency.
+        </p>
+        <p className="text-lg mb-6">
+          From a technology perspective, Express Budget was built using a modern
+          front-end stack, ensuring a seamless and engaging user experience. The
+          application features dynamic animations, smooth transitions, and a
+          state-preserving architecture that maintains user inputs across
+          multiple steps. Additionally, it integrates with the Bitrix24 API to
+          automatically capture lead information and streamline the sales
+          process.
+        </p>
+
+        <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+          🚀 Key Technical Challenges
+        </h2>
+        <ul className="list-disc list-inside space-y-2 mb-6">
+          <li className="text-lg">
+            <strong>Advanced interactive experience:</strong> Smooth animations,
+            carousels, and seamless transitions.
+          </li>
+          <li className="text-lg">
+            <strong>State management:</strong> Preserving data across multiple
+            routes.
+          </li>
+          <li className="text-lg">
+            <strong>External API integration:</strong> Communication with the
+            Bitrix24 API, overcoming documentation challenges.
+          </li>
+          <li className="text-lg">
+            <strong>Custom financial calculations:</strong> Implementing
+            specific formulas provided by the client.
+          </li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+          🛠 My Responsibilities
+        </h2>
+        <ul className="list-disc list-inside space-y-2 mb-6">
+          <li className="text-lg">
+            Defining scope and aligning with the client.
+          </li>
+          <li className="text-lg">
+            Implementing front-end and system architecture.
+          </li>
+          <li className="text-lg">
+            Integrating APIs and developing financial calculations.
+          </li>
+          <li className="text-lg">
+            Deploying and configuring hosting, including DNS setup.
+          </li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+          📈 Impact and Results
+        </h2>
+        <p className="mb-6 text-lg">
+          The client reported a{' '}
+          <strong>significant reduction in unqualified leads</strong>, allowing
+          the sales team to focus on more relevant opportunities. While no
+          quantitative metrics are available, the project fully met the client's
+          expectations and continues to be used.
+        </p>
+
+        <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+          🔍 Learnings and Future Improvements
+        </h2>
+        <p className="text-lg">
+          This project was a major learning experience in implementing
+          interactive designs and applying complex financial calculations within
+          a dynamic visual experience. Future improvements could include{' '}
+          <strong>automated testing and performance optimizations</strong> for
+          better scalability.
+        </p>
+
+        {/* <p className="my-2">
           This web application is a home building budget simulator. I was asked
           by a brazilian realstate company to make this web application, in
           order to simplify the budgeting process for their clients. Before this
@@ -65,7 +146,7 @@ const ExpressBudget = () => {
           sent to Bitrix24, via their own api, and stored as a lead. Finally the
           user is able to see a resumed report of their choices and final budget
           generated.
-        </p>
+        </p> */}
       </section>
     </WorkDetails>
   )
