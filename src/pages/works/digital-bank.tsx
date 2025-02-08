@@ -135,12 +135,12 @@ const DigitalBank = () => {
           <h3 className="text-2xl font-semibold mb-2">Outcome and Impact</h3>
           <p className="text-lg">
             Digital Bank was built from the ground up as the front-end
-            foundation for Valepay’s digital banking platform. Although formal
-            metrics are unavailable, the platform remains live at its designated
-            URL and continues to support the startup's expansion in the tourism
-            sector. This project demonstrates my ability to build secure,
-            scalable, and user-centric applications that effectively address
-            complex business challenges.
+            foundation for Valepay&apos;s digital banking platform. Although
+            formal metrics are unavailable, the platform remains live at its
+            designated URL and continues to support the startup&apos;s expansion
+            in the tourism sector. This project demonstrates my ability to build
+            secure, scalable, and user-centric applications that effectively
+            address complex business challenges.
           </p>
         </div>
       </section>
