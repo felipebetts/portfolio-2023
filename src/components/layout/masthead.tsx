@@ -56,13 +56,10 @@ const Masthead: React.FC = () => {
           </h2>
           <SocialLinks />
         </div>
-        {/* ${
-               imageLoaded ? 'opacity-100' : 'opacity-0 -translate-y-10'
-             } */}
         <div
           className={`flex-grow-0 pb-20 md:pb-10 text-[var(--color-primary-100)] drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)]
-             transition-all duration-1000 z-10 animate-bounce 
-             
+            transition-all duration-1000 z-10 animate-bounce 
+            ${imageLoaded ? 'opacity-100' : 'opacity-0 -translate-y-10'}
                 `}
         >
           <svg
