@@ -107,7 +107,7 @@ export const ParallaxSinglePage: React.FC<ParallaxSinglePageProps> = ({
   return (
     <div
       ref={containerRef}
-      className="h-max sticky top-0" //  -z-10
+      className="h-max sticky top-0 hidden md:block" //  -z-10
       style={{
         transform: `translateY(-${progress * 20}vh)`
       }}
