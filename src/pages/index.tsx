@@ -1,10 +1,10 @@
+import React from 'react'
+import Head from 'next/head'
+
 import Contact from '@/components/layout/contact-form'
 import About from '@/components/layout/about'
 import Masthead from '@/components/layout/masthead'
 import Works from '@/components/layout/works/works'
-import Head from 'next/head'
-import React from 'react'
-import Footer from '@/components/layout/footer'
 import Profile from '@/components/layout/profile'
 
 const Home: React.FC = () => {
