@@ -84,7 +84,7 @@ const Masthead: React.FC = () => {
   return (
     <>
       <ParallaxSinglePage>{MastHeadContent()}</ParallaxSinglePage>
-      <div className="md:hidden h-max relative">{MastHeadContent()}</div>
+      <div className="md:hidden">{MastHeadContent()}</div>
     </>
   )
 }
