@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 import { ParallaxSinglePage } from '@/components/shared/parallax'
@@ -6,8 +6,18 @@ import SocialLinks from './social-links'
 
 const Masthead: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState(false)
+  const videoRef = useRef<HTMLVideoElement | null>(null)
+
   const handleImageLoaded = useCallback(() => {
     setImageLoaded(true)
+  }, [])
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current
+        .play()
+        .catch(err => console.error('Erro ao iniciar vídeo:', err))
+    }
   }, [])
 
   return (
@@ -17,14 +27,16 @@ const Masthead: React.FC = () => {
         loop
         muted
         playsInline
-        className="absolute w-full h-full object-cover -z-10"
+        preload="auto"
+        className="absolute w-full h-full object-cover"
       >
         <source src="/videos/oceano.mp4" type="video/mp4" />
       </video>
-      <div className="min-h-screen h-full w-full flex flex-col justify-center items-center bg-black/60">
+      <div className="min-h-screen h-full w-full flex flex-col justify-center items-center">
+        <div className="absolute w-full h-full z-10 bg-black/60"></div>
         <div
           className={`
-                    p-12 font-bold z-10 text-[var(--color-primary-100)] drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] text-center flex flex-1 items-center justify-center flex-col
+                    p-12 font-bold z-20 text-[var(--color-primary-100)] drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] text-center flex flex-1 items-center justify-center flex-col
                     
           `}
         >
@@ -44,11 +56,13 @@ const Masthead: React.FC = () => {
           </h2>
           <SocialLinks />
         </div>
+        {/* ${
+               imageLoaded ? 'opacity-100' : 'opacity-0 -translate-y-10'
+             } */}
         <div
           className={`flex-grow-0 pb-20 md:pb-10 text-[var(--color-primary-100)] drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)]
-             transition-all duration-1000 z-10 animate-bounce ${
-               imageLoaded ? 'opacity-100' : 'opacity-0 -translate-y-10'
-             }
+             transition-all duration-1000 z-10 animate-bounce 
+             
                 `}
         >
           <svg
