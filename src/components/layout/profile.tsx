@@ -2,7 +2,7 @@ import React from 'react'
 
 const Profile = () => {
   return (
-    <div className="relative z-10  w-full bg-[var(--color-primary-100)] text-[var(--color-primary-500)] text-3xl leading-10">
+    <div className="relative z-10 w-full bg-[var(--color-primary-100)] text-[var(--color-primary-500)] text-3xl leading-10">
       <div className="w-full max-w-5xl mx-auto px-10 lg:px-20 py-16 md:py-18 lg:py-24">
         <p className="mb-8">
           <strong>
