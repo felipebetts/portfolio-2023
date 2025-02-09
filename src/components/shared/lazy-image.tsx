@@ -18,7 +18,13 @@ const LazyImage: React.FC<Props> = ({ alt, className, height, src, width }) => {
   }
 
   return (
-    <div className={clsx('relative mx-auto w-max h-max', className)}>
+    <div
+      className={clsx(
+        `relative mx-auto w-full aspect-video max-w-3xl`,
+        'rounded-md drop-shadow-2xl overflow-hidden',
+        className
+      )}
+    >
       <div
         className={clsx(
           'absolute top-0 h-full w-full',
@@ -29,13 +35,11 @@ const LazyImage: React.FC<Props> = ({ alt, className, height, src, width }) => {
       />
       <Image
         src={src}
-        width={width}
-        height={height}
+        fill
         alt={alt}
         onLoad={handleImageLoaded}
         className={clsx(
-          'relative transition-opacity duration-300',
-          'rounded-md drop-shadow-2xl',
+          'transition-opacity duration-300 object-cover',
           imageLoaded ? 'opacity-100' : 'opacity-0'
         )}
       />
