@@ -6,7 +6,7 @@ const Profile = () => {
       <div className="w-full max-w-5xl mx-auto px-10 lg:px-20 py-16 md:py-18 lg:py-24">
         <p className="mb-8">
           <strong>
-            Hello, I&apos;m Felipe, a Software Developer with over 3 years of
+            Hello, I&apos;m Felipe, a Software Developer with over 4 years of
             experience in Web Development.{' '}
           </strong>
           During this time, I&apos;ve had the opportunity of working with large
