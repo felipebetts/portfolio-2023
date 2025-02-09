@@ -41,7 +41,7 @@ const Masthead: React.FC = () => {
           `}
         >
           <Image
-            src="/images/profile.jfif"
+            src="/images/profile.webp"
             width={128}
             height={144}
             alt="Profile picture"
