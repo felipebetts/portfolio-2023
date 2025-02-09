@@ -81,6 +81,6 @@ export const WorkImage: React.FC<ImageProps> = ({ alt, src }) => (
     src={src}
     height={360}
     width={640}
-    className="my-6 mx-auto"
+    className="mb-4 mx-auto"
   />
 )
