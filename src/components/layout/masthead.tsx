@@ -20,8 +20,8 @@ const Masthead: React.FC = () => {
     }
   }, [])
 
-  return (
-    <ParallaxSinglePage>
+  const MastHeadContent = () => (
+    <>
       <video
         autoPlay
         loop
@@ -78,7 +78,14 @@ const Masthead: React.FC = () => {
           </svg>
         </div>
       </div>
-    </ParallaxSinglePage>
+    </>
+  )
+
+  return (
+    <>
+      <ParallaxSinglePage>{MastHeadContent()}</ParallaxSinglePage>
+      <div className="md:hidden h-max relative">{MastHeadContent()}</div>
+    </>
   )
 }
 
