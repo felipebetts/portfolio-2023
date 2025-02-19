@@ -1,13 +1,31 @@
 import { WorkImage } from '@/components/layout/works/work'
 import WorkDetails from '@/components/layout/works/work-details'
+import Carousel from '@/components/shared/carousel'
+import CarouselItem from '@/components/shared/carousel-item'
+import LazyImage from '@/components/shared/lazy-image'
 import PillData from '@/components/shared/pill-data'
 import React from 'react'
 
 const Donations = () => {
+  const images = [
+    'cover.png',
+    '3.png',
+    '4.png',
+    '5.png',
+    '6.png',
+    '7.png',
+    '8.png'
+  ]
   return (
     <WorkDetails title="Donations Agreggator">
       <section className="py-3">
-        <WorkImage alt="cover" src="/images/ajudapet/cover.png" />
+        <Carousel className="mx-auto">
+          {images.map((el, i) => (
+            <CarouselItem index={i} key={i}>
+              <LazyImage alt="cover" src={`/images/ajudapet/${el}`} />
+            </CarouselItem>
+          ))}
+        </Carousel>
       </section>
       <section className="py-3">
         <PillData tag="Stack">
@@ -40,8 +58,6 @@ const Donations = () => {
           mobile application, <strong>unifying the user base</strong> and
           ensuring a consistent authentication process across platforms.
         </p>
-        <WorkImage src="/images/ajudapet/3.png" alt="donations agreggator" />
-        <WorkImage alt="donations agreggator" src="/images/ajudapet/4.png" />
         <p className="my-2 text-lg">
           A critical aspect of the project was developing a{' '}
           <strong>seamless payment process</strong>. I integrated{' '}
@@ -76,11 +92,6 @@ const Donations = () => {
           that meet both business and user needs.
         </p>
         <p className="my-2 text-lg"></p>
-
-        <WorkImage src="/images/ajudapet/5.png" alt="donations agreggator" />
-        <WorkImage alt="donations agreggator" src="/images/ajudapet/6.png" />
-        <WorkImage src="/images/ajudapet/7.png" alt="donations agreggator" />
-        <WorkImage src="/images/ajudapet/8.png" alt="donations agreggator" />
       </section>
     </WorkDetails>
   )

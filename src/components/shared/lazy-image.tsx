@@ -5,12 +5,10 @@ import { clsx } from 'clsx'
 interface Props {
   alt: string
   className?: string
-  height: number
   src: string
-  width: number
 }
 
-const LazyImage: React.FC<Props> = ({ alt, className, height, src, width }) => {
+const LazyImage: React.FC<Props> = ({ alt, className, src }) => {
   const [imageLoaded, setImageLoaded] = useState(false)
 
   const handleImageLoaded = () => {
@@ -20,15 +18,16 @@ const LazyImage: React.FC<Props> = ({ alt, className, height, src, width }) => {
   return (
     <div
       className={clsx(
-        `relative mx-auto w-full aspect-video max-w-3xl`,
-        'rounded-md drop-shadow-2xl overflow-hidden',
+        // 'mx-auto',
+        `relative w-full aspect-video max-w-3xl`,
+        'drop-shadow-2xl overflow-hidden',
         className
       )}
     >
       <div
         className={clsx(
           'absolute top-0 h-full w-full',
-          'rounded-md bg-neutral-400',
+          'bg-neutral-400',
           'animate-pulse transition-opacity duration-300',
           imageLoaded ? 'hidden' : 'block'
         )}
@@ -39,7 +38,7 @@ const LazyImage: React.FC<Props> = ({ alt, className, height, src, width }) => {
         alt={alt}
         onLoad={handleImageLoaded}
         className={clsx(
-          'transition-opacity duration-300 object-cover',
+          'transition-opacity duration-300 object-cover object-top',
           imageLoaded ? 'opacity-100' : 'opacity-0'
         )}
       />

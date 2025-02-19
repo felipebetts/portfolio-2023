@@ -1,9 +1,10 @@
+import React from 'react'
+import Link from 'next/link'
+import { IoExitOutline } from 'react-icons/io5'
+
 import { WorkImage } from '@/components/layout/works/work'
 import WorkDetails from '@/components/layout/works/work-details'
 import PillData from '@/components/shared/pill-data'
-import Link from 'next/link'
-import React from 'react'
-import { IoExitOutline } from 'react-icons/io5'
 
 const Onefan: React.FC = () => {
   return (

@@ -5,12 +5,22 @@ import { IoExitOutline } from 'react-icons/io5'
 import WorkDetails from '@/components/layout/works/work-details'
 import PillData from '@/components/shared/pill-data'
 import { WorkImage } from '@/components/layout/works/work'
+import Carousel from '@/components/shared/carousel'
+import CarouselItem from '@/components/shared/carousel-item'
+import LazyImage from '@/components/shared/lazy-image'
 
 const ExpressBudget = () => {
+  const images = ['cover.png', '1.png', '2.png', '3.png']
   return (
     <WorkDetails sub="iBuild" title="Express Budget">
       <section className="py-3">
-        <WorkImage alt="cover" src="/images/orcamento_express/cover.png" />
+        <Carousel className="mx-auto">
+          {images.map((el, i) => (
+            <CarouselItem index={i} key={i}>
+              <LazyImage alt="cover" src={`/images/orcamento_express/${el}`} />
+            </CarouselItem>
+          ))}
+        </Carousel>
       </section>
       <section className="py-3">
         <PillData tag="Link">
