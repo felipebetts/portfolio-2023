@@ -38,7 +38,7 @@ const LazyImage: React.FC<Props> = ({ alt, className, src }) => {
         alt={alt}
         onLoad={handleImageLoaded}
         className={clsx(
-          'transition-opacity duration-300 object-cover',
+          'transition-opacity duration-300 object-cover object-top',
           imageLoaded ? 'opacity-100' : 'opacity-0'
         )}
       />

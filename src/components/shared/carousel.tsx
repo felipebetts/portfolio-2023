@@ -81,7 +81,7 @@ const Carousel: React.FC<Props> = ({ children, className }) => {
         <div
           ref={viewportRef}
           className={clsx(
-            'w-full max-w-3xl overflow-hidden relative rounded-md',
+            'w-full max-w-3xl overflow-hidden relative rounded-md drop-shadow-lg',
             className || '',
             styles.viewport
           )}
@@ -103,7 +103,7 @@ const Carousel: React.FC<Props> = ({ children, className }) => {
           )} */}
         </div>
         <div className="w-full mt-4">
-          <div className="h-3 max-w-xs mx-auto flex justify-center items-end gap-4">
+          <div className="h-3 max-w-md mx-auto flex justify-center items-end gap-4">
             {emblaApi?.slideNodes().map((slide, i) => {
               console.log(selectedIndex, i, selectedIndex === i)
               return (
@@ -113,8 +113,8 @@ const Carousel: React.FC<Props> = ({ children, className }) => {
                   className={clsx(
                     'h-2 rounded-md flex-1 bg-[var(--color-primary-500)]',
                     'max-w-12 drop-shadow-xl',
-                    'hover:h-3 transition-all opacity-100',
-                    selectedIndex !== i && 'opacity-30'
+                    'transition-all opacity-100 hover:h-3',
+                    selectedIndex !== i && 'opacity-30 hover:opacity-70'
                   )}
                 />
               )

@@ -5,12 +5,22 @@ import { IoExitOutline } from 'react-icons/io5'
 import WorkDetails from '@/components/layout/works/work-details'
 import PillData from '@/components/shared/pill-data'
 import { WorkImage } from '@/components/layout/works/work'
+import Carousel from '@/components/shared/carousel'
+import CarouselItem from '@/components/shared/carousel-item'
+import LazyImage from '@/components/shared/lazy-image'
 
 const DigitalBank = () => {
+  const images = ['1.jpg', '2.jpg', 'login.png']
   return (
     <WorkDetails sub="Valepay" title="Digital Bank">
       <section className="py-3">
-        <WorkImage alt="cover" src="/images/valepay/1.jpg" />
+        <Carousel className="mx-auto">
+          {images.map((el, i) => (
+            <CarouselItem index={i} key={i}>
+              <LazyImage alt="cover" src={`/images/valepay/${el}`} />
+            </CarouselItem>
+          ))}
+        </Carousel>
       </section>
       <section className="py-3">
         <PillData tag="Link">
