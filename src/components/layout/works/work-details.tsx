@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 
 import Breadcrumbs from '../../shared/breadcrumbs'
 import s from '@/styles/animations.module.css'
@@ -12,6 +13,14 @@ interface Props {
 const WorkDetails: React.FC<Props> = ({ children, sub, title }) => {
   return (
     <div>
+      <Head>
+        <title>{title}</title>
+        <meta
+          name="description"
+          content="Hello, I'm Felipe, a Software Developer with over 4 years of
+            experience in Web Development."
+        />
+      </Head>
       <header className="w-full max-w-[var(--max-w)] min-h-[20vh] md:min-h-[22.5vh] flex flex-col justify-between mx-auto">
         <div className="p-4 md:p-6">
           <Breadcrumbs />

@@ -14,7 +14,8 @@ const Home: React.FC = () => {
         <title>Felipe Betts - Software Developer</title>
         <meta
           name="description"
-          content="Hello! I'm a Software Developer from Brazil"
+          content="Hello, I'm Felipe, a Software Developer with over 4 years of
+            experience in Web Development."
         />
       </Head>
       <Masthead />
