@@ -1,15 +1,28 @@
+import React from 'react'
+import Link from 'next/link'
+import { IoExitOutline } from 'react-icons/io5'
+
 import { WorkImage } from '@/components/layout/works/work'
 import WorkDetails from '@/components/layout/works/work-details'
+import Carousel from '@/components/shared/carousel'
+import CarouselItem from '@/components/shared/carousel-item'
+import LazyImage from '@/components/shared/lazy-image'
 import PillData from '@/components/shared/pill-data'
-import Link from 'next/link'
-import React from 'react'
-import { IoExitOutline } from 'react-icons/io5'
 
 const Onefan: React.FC = () => {
   return (
     <WorkDetails sub="Onefan" title="Osasuna's Official Website">
       <section className="py-3">
         <WorkImage alt="cover" src="/images/onefan/osasuna-home.png" />
+      </section>
+      <section className="py-3">
+        <Carousel className="mx-auto">
+          {[1, 2, 3, 4, 5].map((el, i) => (
+            <CarouselItem index={i} key={i}>
+              <LazyImage alt="cover" src="/images/onefan/osasuna-home.png" />
+            </CarouselItem>
+          ))}
+        </Carousel>
       </section>
       <section className="py-3">
         <PillData tag="Link">

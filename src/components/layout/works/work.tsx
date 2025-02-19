@@ -76,11 +76,5 @@ export const WorkLink: React.FC<LinkProps> = ({ href, children }) => (
 )
 
 export const WorkImage: React.FC<ImageProps> = ({ alt, src }) => (
-  <LazyImage
-    alt={alt}
-    src={src}
-    height={360}
-    width={640}
-    className="mb-4 mx-auto"
-  />
+  <LazyImage alt={alt} src={src} className="mb-4 mx-auto rounded-md" />
 )
