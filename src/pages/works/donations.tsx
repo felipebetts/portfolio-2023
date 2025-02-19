@@ -36,62 +36,113 @@ const Donations = () => {
         </PillData>
       </section>
       <section className="py-3">
-        <p className="my-2 text-lg">
-          Donations Aggregator is a platform designed to{' '}
-          <strong>streamline charitable donations for abandoned animals</strong>{' '}
-          by funding treatment and shelter initiatives. Developed in response to
-          a client’s vision, the platform leverages <strong>QR codes</strong>{' '}
-          placed in pet shops to direct pet lovers to a{' '}
-          <strong>secure, user-friendly donation process</strong>. Each
-          participating pet shop acts as an affiliate, earning a modest
-          commission per donation and contributing to a{' '}
-          <strong>sustainable ecosystem</strong> that benefits both the cause
-          and the business.
+        {/* Overview / Introduction */}
+        <p className="text-lg mb-4">
+          Donations Aggregator is a platform designed to streamline charitable
+          donations for abandoned animals by funding treatment and shelter
+          initiatives. In response to a client’s vision, the platform leverages
+          QR codes in pet shops to guide pet lovers through a secure and
+          user-friendly donation process. Each pet shop acts as an affiliate,
+          earning a commission per donation while contributing to a sustainable
+          ecosystem that benefits both the cause and the business.
         </p>
-        <p className="my-2 text-lg">
-          The primary objective was to create an experience that combines{' '}
-          <strong>robust security</strong> with simplicity. To achieve this, I
-          implemented <strong>SMS authentication using the smstoken API</strong>{' '}
-          and integrated it via a dedicated{' '}
-          <strong>Backend-for-Frontend (BFF) within Next.js</strong>. This
-          integration involved modifying the legacy login flow of an existing
-          mobile application, <strong>unifying the user base</strong> and
-          ensuring a consistent authentication process across platforms.
-        </p>
-        <p className="my-2 text-lg">
-          A critical aspect of the project was developing a{' '}
-          <strong>seamless payment process</strong>. I integrated{' '}
-          <strong>Mercado Pago’s API</strong> to support both{' '}
-          <strong>credit card transactions and PIX payments</strong>—the latter
-          being Brazil’s instant bank transfer system. The checkout process
-          remains entirely on-site, with sensitive payment data{' '}
-          <strong>tokenized on the backend</strong> before transmission.
-          Incorporating <strong>familiar Mercado Pago icons</strong> reinforces
-          trust and maintains clarity throughout the transaction, ensuring a
-          smooth user experience.
-        </p>
-        <p className="my-2 text-lg">
-          Design decisions were made in{' '}
-          <strong>close collaboration with the client</strong>. Without a
-          dedicated designer, I utilized <strong>Material UI</strong> to
-          establish a <strong>consistent, modern interface</strong> that met the
-          client’s specifications while enhancing usability. This approach
-          resulted in a <strong>cohesive design system</strong> that supported
-          both the functionality and aesthetic requirements of the platform.
-        </p>
-        <p className="my-2 text-lg">
-          Overall, Donations Aggregator stands as a reflection of my{' '}
-          <strong>hands-on experience</strong> in creating{' '}
-          <strong>secure, user-focused solutions</strong>. This project, one of
-          my <strong>first major freelance engagements</strong>, offered{' '}
-          <strong>valuable lessons</strong> in{' '}
-          <strong>integrating modern features into a legacy system</strong> and
-          balancing innovation with practical constraints. I’m proud of the work
-          delivered, and I believe it effectively demonstrates my commitment to
-          building <strong>scalable and reliable digital experiences</strong>{' '}
-          that meet both business and user needs.
-        </p>
-        <p className="my-2 text-lg"></p>
+
+        {/* Key Challenges and Solutions */}
+        <div className="mb-4">
+          <h3 className="text-2xl font-semibold mb-2">
+            Key Challenges and Solutions
+          </h3>
+          <ul className="list-disc list-inside space-y-2 text-lg">
+            <li>
+              <strong>Balancing Security and Simplicity:</strong> Implemented
+              SMS authentication using the smstoken API via a dedicated
+              Backend-for-Frontend (BFF) in Next.js, unifying a legacy mobile
+              login flow for a consistent experience.
+            </li>
+            <li>
+              <strong>Seamless Payment Integration:</strong> Integrated Mercado
+              Pago’s API to support both credit card and PIX transactions,
+              ensuring that sensitive payment data was securely tokenized on the
+              backend.
+            </li>
+          </ul>
+        </div>
+
+        {/* My Role */}
+        <div className="mb-4">
+          <h3 className="text-2xl font-semibold mb-2">My Role</h3>
+          <p className="text-lg">
+            I led the development of Donations Aggregator, transforming the
+            client’s vision into a robust, secure platform. I engineered the SMS
+            authentication flow, revamped the legacy login process, and
+            implemented a seamless, on-site checkout experience by integrating
+            Mercado Pago’s API for secure payment processing.
+          </p>
+        </div>
+
+        {/* Technical Highlights */}
+        <div className="mb-4">
+          <h3 className="text-2xl font-semibold mb-2">Technical Highlights</h3>
+          <ul className="list-disc list-inside space-y-2 text-lg">
+            <li>
+              <strong>Secure Authentication:</strong> Leveraged the smstoken API
+              with a dedicated BFF in Next.js to create a unified and secure
+              login process.
+            </li>
+            <li>
+              <strong>Payment Integration:</strong> Seamlessly integrated
+              Mercado Pago’s API for both credit card and PIX payments, with
+              tokenization of sensitive data enhancing security.
+            </li>
+            <li>
+              <strong>Cohesive UI/UX:</strong> Adopted Material UI to build a
+              consistent, modern interface that met the client’s specifications
+              and improved usability, despite the absence of a dedicated
+              designer.
+            </li>
+          </ul>
+        </div>
+
+        {/* Development Approach */}
+        <div className="mb-4">
+          <h3 className="text-2xl font-semibold mb-2">Development Approach</h3>
+          <ul className="list-disc list-inside space-y-2 text-lg">
+            <li>
+              <strong>Client Collaboration:</strong> Worked closely with the
+              client to define design and functionality, ensuring the platform
+              was both secure and easy to use.
+            </li>
+            <li>
+              <strong>Modernizing Legacy Systems:</strong> Integrated new
+              technologies into an existing legacy environment, delivering a
+              unified authentication and payment experience.
+            </li>
+          </ul>
+        </div>
+
+        {/* Outcome and Impact */}
+        <div className="mb-4">
+          <h3 className="text-2xl font-semibold mb-2">Outcome and Impact</h3>
+          <p className="text-lg">
+            Donations Aggregator effectively streamlines the donation process
+            for abandoned animals while generating sustainable revenue for pet
+            shop affiliates. As one of my first major freelance projects, it
+            stands as a testament to my ability to build secure, scalable
+            digital solutions that meet both business and user needs.
+          </p>
+        </div>
+
+        {/* Key Learnings */}
+        <div>
+          <h3 className="text-2xl font-semibold mb-2">Key Learnings</h3>
+          <p className="text-lg">
+            This project reinforced the importance of integrating modern
+            authentication and payment systems into legacy architectures. I
+            learned to balance robust security measures with simplicity,
+            ensuring a seamless and cohesive user experience throughout the
+            platform.
+          </p>
+        </div>
       </section>
     </WorkDetails>
   )

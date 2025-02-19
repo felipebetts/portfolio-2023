@@ -33,11 +33,11 @@ const Onefan: React.FC = () => {
       <section className="py-3">
         {/* Overview / Introduction */}
         <p className="text-lg mb-4">
-          At OneFan, I began my journey as a Senior Front-end Developer and
-          quickly advanced to Tech Lead of the web team. OneFan is a fan
-          engagement platform for soccer enthusiasts, and in this project we
-          focused on engaging supporters of the Spanish team Osasuna by keeping
-          them informed with dynamic, real-time updates.
+          OneFan is a fan engagement platform for soccer enthusiasts, and in
+          this project we focused on engaging supporters of the Spanish team
+          Osasuna by keeping them informed with dynamic, real-time updates. At
+          OneFan, I began my journey as a Senior Front-end Developer and quickly
+          advanced to Tech Lead of the web team.
         </p>
 
         {/* Key Challenges and Solutions */}
