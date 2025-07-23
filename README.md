@@ -1,38 +1,102 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio 2.0 🚀
 
-## Getting Started
+My personal portfolio website built with modern technologies and focus on user experience.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![i18n](https://img.shields.io/badge/i18n-26A69A?style=for-the-badge&logo=i18next&logoColor=white)
+
+## Overview 🌟
+
+This is my professional portfolio, developed with the latest web technologies. The project was built focusing on performance, accessibility, and internationalization, offering a unique experience for visitors.
+
+## Key Features ✨
+
+- 🎨 **Modern and Responsive Design** - Elegant interface that adapts to any device
+- 🌍 **Full Internationalization** - Support for multiple languages (EN/PT)
+- 🚀 **Optimized Performance** - Fast loading and Next.js optimizations
+- 🎭 **Smooth Animations** - Fluid transitions and interactions
+- 📧 **Contact Form** - Email service integration
+- 🖼️ **Project Gallery** - Work showcase with interactive carousel
+
+## Technologies 🛠️
+
+- **Framework**: [Next.js 13](https://nextjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [TailwindCSS](https://tailwindcss.com/)
+- **Internationalization**: [next-i18next](https://github.com/i18next/next-i18next)
+- **Carousel**: [Embla Carousel](https://www.embla-carousel.com/)
+- **Email**: [Nodemailer](https://nodemailer.com/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+
+## Getting Started 🚀
+
+### Prerequisites
+
+- Node.js 14.0 or higher
+- Yarn or NPM
+
+### Installation
+
+1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone https://github.com/your-username/portfolio-2.0.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install
+# or
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. Start development server
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+yarn dev
+# or
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Open `http://localhost:3000`
 
-## Learn More
+## Project Structure 📁
 
-To learn more about Next.js, take a look at the following resources:
+```
+portfolio-2.0/
+├── public/          # Static files
+│   ├── images/      # Images
+│   ├── locales/     # Translation files
+│   └── videos/      # Videos
+├── src/
+│   ├── components/  # React components
+│   ├── hooks/       # Custom hooks
+│   ├── pages/       # Application pages
+│   ├── services/    # External services
+│   ├── styles/      # Global styles
+│   └── utils/       # Utilities
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Internationalization 🌍
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The project supports multiple languages through next-i18next. Translation files are located in `public/locales/`.
 
-## Deploy on Vercel
+## Available Scripts 📝
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `yarn dev` - Start development environment
+- `yarn build` - Generate production build
+- `yarn start` - Start production server
+- `yarn lint` - Run code linting
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contact 📬
+
+- Website: [felipebetts.com.br](https://felipebetts.com.br)
+- LinkedIn: [Felipe Betts](https://linkedin.com/in/felipe-betts)
+- Email: contato@felipebetts.com.br
+
+---
+
+Made with ❤️ and ☕
