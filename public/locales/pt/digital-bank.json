@@ -1,0 +1,68 @@
+{
+  "title": "Banco Digital",
+  "subtitle": "Valepay",
+  "description": "<strong>Banco Digital – Valepay</strong> é uma plataforma de banco digital de ponta projetada especificamente para a indústria do turismo. Como único desenvolvedor front-end em uma equipe ágil e enxuta—composta por um designer e um co-fundador back-end—fui responsável por todos os aspectos do desenvolvimento do lado do cliente, desde decisões tecnológicas e arquiteturais até a codificação de toda a interface do usuário do zero. Esta colaboração próxima garantiu uma experiência de usuário excepcional e segura.",
+  "challenges": {
+    "title": "Principais Desafios e Soluções",
+    "items": [
+      {
+        "title": "Autenticação Complexa Baseada em Papéis:",
+        "description": "Implementação de um sistema robusto para lidar com múltiplos papéis de usuário (agências, gerentes, vendedores), cada um com acesso personalizado e visualizações distintas do painel."
+      },
+      {
+        "title": "Segurança em Transações Financeiras:",
+        "description": "Integração de funcionalidades financeiras seguras como transações PIX e cartão de crédito, enquanto gerenciava as complexidades de variações de data e composições de calendário para agendamento de pagamentos."
+      },
+      {
+        "title": "Componentes UI Personalizados:",
+        "description": "Criação de componentes reutilizáveis como calendários interativos, barras laterais responsivas e tabelas paginadas para manter um sistema de design consistente e garantir uma interface amigável."
+      }
+    ]
+  },
+  "role": {
+    "title": "Meu Papel",
+    "description": "Atuei como único desenvolvedor front-end, sendo responsável por toda a arquitetura e implementação do lado do cliente. Escolhi e implementei tecnologias como Next.js e Styled Components para construir uma plataforma dinâmica, escalável e pronta para produção, colaborando estreitamente com o designer e o desenvolvedor back-end para otimizar a experiência do usuário."
+  },
+  "highlights": {
+    "title": "Destaques Técnicos",
+    "items": [
+      {
+        "title": "Next.js & React:",
+        "description": "Utilizados para performance superior em produção e construção de interfaces dinâmicas e responsivas."
+      },
+      {
+        "title": "Styled Components:",
+        "description": "Utilizado para estabelecer um sistema de design consistente e personalizável através de componentes UI reutilizáveis."
+      },
+      {
+        "title": "Axios com Middleware Personalizado:",
+        "description": "Otimizou comunicações com API injetando automaticamente tokens de autenticação e tratando erros de forma uniforme."
+      },
+      {
+        "title": "Chart.js e Quill:",
+        "description": "Integrados para entregar visualizações de dados responsivas e aprimorar funcionalidades de CRM permitindo a geração de conteúdo promocional."
+      }
+    ]
+  },
+  "approach": {
+    "title": "Abordagem de Desenvolvimento",
+    "items": [
+      {
+        "title": "Kanban Ágil:",
+        "description": "Empregado para garantir desenvolvimento rápido e progresso iterativo em um ambiente de startup acelerado."
+      },
+      {
+        "title": "Colaboração Eficiente:",
+        "description": "Trabalho em sincronia próxima com o designer e o co-fundador back-end para entregar uma plataforma pronta para produção."
+      },
+      {
+        "title": "Foco na Entrega:",
+        "description": "Embora testes unitários não tenham sido implementados para manter a agilidade, testes manuais rigorosos garantiram funcionalidade confiável."
+      }
+    ]
+  },
+  "outcome": {
+    "title": "Resultado e Impacto",
+    "description": "O Banco Digital foi construído do zero como a base front-end para a plataforma de banco digital da Valepay. Embora métricas formais não estejam disponíveis, a plataforma permanece ativa em sua URL designada e continua a apoiar a expansão da startup no setor de turismo. Este projeto demonstra minha capacidade de construir aplicações seguras, escaláveis e centradas no usuário que abordam efetivamente desafios complexos de negócios."
+  }
+}

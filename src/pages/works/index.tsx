@@ -1,52 +1,54 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import s from '@/styles/works.module.css'
 import WorkDetails from '@/components/layout/works/work-details'
 
-const works = [
-  {
-    title: 'Soccer Team Website',
-    sub: 'OneFan',
-    image: '/images/onefan/osasuna-home.png',
-    href: '/works/onefan'
-  },
-  // {
-  //   title: 'FitDance Sales Page',
-  //   sub: 'OneFan',
-  //   image: '/images/onefan/osasuna-home.png',
-  //   href: '/works/onefan'
-  // },
-  {
-    title: 'Online Tourism Agency',
-    sub: 'Hurb',
-    image: '/images/hurb/hurb-home.png',
-    href: '/works/hurb'
-  },
-  {
-    title: 'Digital Banking Platform',
-    sub: 'OneFan',
-    image: '/images/valepay/1.jpg',
-    href: '/works/digital-bank'
-  },
-  {
-    title: 'Construction Budget Simulator',
-    sub: 'iBuild Construtora',
-    image: '/images/orcamento_express/cover.png',
-    href: '/works/express-budget'
-  },
-  {
-    title: 'Donations Agreggator',
-    sub: 'Ajuda Pet',
-    image: '/images/ajudapet/cover.png',
-    href: '/works/donations'
-  }
-]
-
 const WorksPage = () => {
+  const { t } = useTranslation('works')
+  const works = [
+    {
+      title: t('onefan.title'),
+      sub: t('onefan.subtitle'),
+      image: '/images/onefan/osasuna-home.png',
+      href: '/works/onefan'
+    },
+    // {
+    //   title: 'FitDance Sales Page',
+    //   sub: 'OneFan',
+    //   image: '/images/onefan/osasuna-home.png',
+    //   href: '/works/onefan'
+    // },
+    {
+      title: t('hurb.title'),
+      sub: t('hurb.subtitle'),
+      image: '/images/hurb/hurb-home.png',
+      href: '/works/hurb'
+    },
+    {
+      title: t('digital-bank.title'),
+      sub: t('digital-bank.subtitle'),
+      image: '/images/valepay/1.jpg',
+      href: '/works/digital-bank'
+    },
+    {
+      title: t('express-budget.title'),
+      sub: t('express-budget.subtitle'),
+      image: '/images/orcamento_express/cover.png',
+      href: '/works/express-budget'
+    },
+    {
+      title: t('donations.title'),
+      sub: t('donations.subtitle'),
+      image: '/images/ajudapet/cover.png',
+      href: '/works/donations'
+    }
+  ]
   return (
-    <WorkDetails title="Works" sub="">
+    <WorkDetails title={t('title')} sub="">
       <div className="w-full max-w-[var(--max-w)] py-2 md:py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-12">
           {works.map((item, i) => (
@@ -73,6 +75,14 @@ const WorksPage = () => {
       </div>
     </WorkDetails>
   )
+}
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'works']))
+    }
+  }
 }
 
 export default WorksPage

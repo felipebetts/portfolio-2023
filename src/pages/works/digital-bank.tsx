@@ -1,18 +1,23 @@
 import React from 'react'
 import Link from 'next/link'
 import { IoExitOutline } from 'react-icons/io5'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import WorkDetails from '@/components/layout/works/work-details'
 import PillData from '@/components/shared/pill-data'
-import { WorkImage } from '@/components/layout/works/work'
 import Carousel from '@/components/shared/carousel'
 import CarouselItem from '@/components/shared/carousel-item'
 import LazyImage from '@/components/shared/lazy-image'
 
 const DigitalBank = () => {
   const images = ['1.jpg', '2.jpg', 'login.png']
+  const { t } = useTranslation('digital-bank')
+  const challenges = t('challenges.items', { returnObjects: true })
+  const highlights = t('highlights.items', { returnObjects: true })
+  const approach = t('approach.items', { returnObjects: true })
   return (
-    <WorkDetails sub="Valepay" title="Digital Bank">
+    <WorkDetails sub={t('subtitle')} title={t('title')}>
       <section className="py-3">
         <Carousel className="mx-auto">
           {images.map((el, i) => (
@@ -42,120 +47,73 @@ const DigitalBank = () => {
       </section>
       <section className="py-3">
         {/* Overview / Introduction */}
-        <p className="text-lg mb-4">
-          <strong>Digital Bank – Valepay</strong> is a cutting-edge digital
-          banking platform designed specifically for the tourism industry. As
-          the sole front-end developer on a lean, agile team—comprising a
-          designer and a back-end co-founder—I was responsible for every aspect
-          of the client-side development, from technology and architectural
-          decisions to coding the entire user interface from scratch. This close
-          collaboration ensured an exceptional and secure user experience.
-        </p>
+        <p
+          className="text-lg mb-4"
+          dangerouslySetInnerHTML={{ __html: t('description') }}
+        />
 
         {/* Key Challenges and Solutions */}
         <div className="mb-4">
           <h3 className="text-2xl font-semibold mb-2">
-            Key Challenges and Solutions
+            {t('challenges.title')}
           </h3>
           <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>
-              <strong>Complex Role-Based Authentication:</strong> Implementing a
-              robust system to handle multiple user roles (agencies, managers,
-              sellers), each with tailored access and distinct dashboard views.
-            </li>
-            <li>
-              <strong>Financial Transaction Security:</strong> Integrating
-              secure financial functionalities such as PIX and credit card
-              transactions, while managing the intricacies of date variations
-              and calendar compositions for payment scheduling.
-            </li>
-            <li>
-              <strong>Custom UI Components:</strong> Creating reusable
-              components like interactive calendars, responsive sidebars, and
-              paginated tables to maintain a consistent design system and ensure
-              a user-friendly interface.
-            </li>
+            {challenges.map((challenge, i) => (
+              <li key={challenge.title}>
+                <strong>{challenge.title}</strong> {challenge.description}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* My Role */}
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">My Role</h3>
-          <p className="text-lg">
-            I served as the sole front-end developer, owning the entire
-            client-side architecture and implementation. I chose and implemented
-            technologies such as Next.js and Styled Components to build a
-            dynamic, scalable, and production-ready platform, collaborating
-            closely with both the designer and back-end developer to optimize
-            the user experience.
-          </p>
+          <h3 className="text-2xl font-semibold mb-2">{t('role.title')}</h3>
+          <p className="text-lg">{t('role.description')}</p>
         </div>
 
         {/* Technical Highlights */}
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">Technical Highlights</h3>
+          <h3 className="text-2xl font-semibold mb-2">
+            {t('highlights.title')}
+          </h3>
           <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>
-              <strong>Next.js &amp; React:</strong> Leveraged for superior
-              production performance and building dynamic, responsive
-              interfaces.
-            </li>
-            <li>
-              <strong>Styled Components:</strong> Utilized to establish a
-              consistent and customizable design system through reusable UI
-              components.
-            </li>
-            <li>
-              <strong>Axios with Custom Middleware:</strong> Streamlined API
-              communications by automatically injecting authentication tokens
-              and handling errors uniformly.
-            </li>
-            <li>
-              <strong>Chart.js and Quill:</strong> Integrated to deliver
-              responsive data visualizations and enhance CRM functionalities by
-              enabling the generation of promotional content.
-            </li>
+            {highlights.map((highlight, i) => (
+              <li key={highlight.title}>
+                <strong>{highlight.title}</strong> {highlight.description}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Development Approach */}
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">Development Approach</h3>
+          <h3 className="text-2xl font-semibold mb-2">{t('approach.title')}</h3>
           <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>
-              <strong>Agile Kanban:</strong> Employed to ensure rapid
-              development and iterative progress in a fast-paced startup
-              environment.
-            </li>
-            <li>
-              <strong>Efficient Collaboration:</strong> Worked in close sync
-              with the designer and back-end co-founder to deliver a
-              production-ready platform.
-            </li>
-            <li>
-              <strong>Focus on Delivery:</strong> While unit tests were not
-              implemented to maintain agility, rigorous manual testing
-              guaranteed reliable functionality.
-            </li>
+            {approach.map((approach, i) => (
+              <li key={approach.title}>
+                <strong>{approach.title}</strong> {approach.description}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Outcome and Impact */}
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">Outcome and Impact</h3>
-          <p className="text-lg">
-            Digital Bank was built from the ground up as the front-end
-            foundation for Valepay&apos;s digital banking platform. Although
-            formal metrics are unavailable, the platform remains live at its
-            designated URL and continues to support the startup&apos;s expansion
-            in the tourism sector. This project demonstrates my ability to build
-            secure, scalable, and user-centric applications that effectively
-            address complex business challenges.
-          </p>
+          <h3 className="text-2xl font-semibold mb-2">{t('outcome.title')}</h3>
+          <p className="text-lg">{t('outcome.description')}</p>
         </div>
       </section>
     </WorkDetails>
   )
+}
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'digital-bank']))
+    }
+  }
 }
 
 export default DigitalBank

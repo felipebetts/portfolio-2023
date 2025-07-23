@@ -1,0 +1,39 @@
+{
+  "title": "Agregador de Doações",
+  "subtitle": "Ajuda Pet",
+  "description": "O Agregador de Doações é uma plataforma projetada para simplificar doações beneficentes para animais abandonados, financiando iniciativas de tratamento e abrigo. Em resposta à visão de um cliente, a plataforma utiliza códigos QR em pet shops para guiar amantes de animais através de um processo de doação seguro e amigável. Cada pet shop atua como um afiliado, ganhando uma comissão por doação enquanto contribui para um ecossistema sustentável que beneficia tanto a causa quanto o negócio.",
+  "challenges": {
+    "title": "Principais Desafios e Soluções",
+    "items": [
+      {
+        "title": "Equilibrando Segurança e Simplicidade:",
+        "description": "Implementei autenticação por SMS usando a API smstoken através de um Backend-for-Frontend (BFF) dedicado em Next.js, unificando um fluxo de login mobile legado para uma experiência consistente."
+      },
+      {
+        "title": "Integração de Pagamento Perfeita:",
+        "description": "Integrei a API do Mercado Pago para suportar transações tanto por cartão de crédito quanto por PIX, garantindo que dados sensíveis de pagamento fossem tokenizados com segurança no backend."
+      }
+    ]
+  },
+  "role": {
+    "title": "Meu Papel",
+    "description": "Liderei o desenvolvimento do Agregador de Doações, transformando a visão do cliente em uma plataforma robusta e segura. Projetei o fluxo de autenticação por SMS, reformulei o processo de login legado e implementei uma experiência de checkout perfeita no site, integrando a API do Mercado Pago para processamento seguro de pagamentos."
+  },
+  "highlights": {
+    "title": "Destaques Técnicos",
+    "items": [
+      {
+        "title": "Autenticação por SMS:",
+        "description": "Implementei autenticação por SMS usando a API smstoken através de um Backend-for-Frontend (BFF) dedicado em Next.js, unificando um fluxo de login mobile legado para uma experiência consistente."
+      },
+      {
+        "title": "Integração de Pagamento:",
+        "description": "Integrei a API do Mercado Pago para suportar transações tanto por cartão de crédito quanto por PIX, garantindo que dados sensíveis de pagamento fossem tokenizados com segurança no backend."
+      },
+      {
+        "title": "UI/UX Coesa:",
+        "description": "Adotei Material UI para construir uma interface consistente e moderna que atendesse às especificações do cliente e melhorasse a usabilidade, apesar da ausência de um designer dedicado."
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Works",
+  "onefan": {
+    "title": "Soccer Team Website",
+    "subtitle": "Onefan"
+  },
+  "hurb": {
+    "title": "Online Tourism Agency",
+    "subtitle": "Hurb"
+  },
+  "digital-bank": {
+    "title": "Digital Banking Platform",
+    "subtitle": "Valepay"
+  },
+  "express-budget": {
+    "title": "Construction Budget Simulator"
+  },
+  "donations": {
+    "title": "Donations Agreggator",
+    "subtitle": "Ajuda Pet"
+  }
+}

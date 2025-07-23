@@ -1,0 +1,51 @@
+{
+  "head": {
+    "title": "Felipe Betts - Software Developer",
+    "description": "Hello, I'm Felipe, a Software Developer with over 4 years of experience in Web Development."
+  },
+  "masthead": {
+    "title": "Felipe Betts",
+    "subtitle": "Software Developer"
+  },
+  "profile": {
+    "heading": "Hello, I'm Felipe, a Software Developer with over 4 years of experience in Web Development.",
+    "p1": "During this time, I've had the opportunity of working with large companies, fast paced startups, and delivering tailored solutions to freelance clients.",
+    "p2": "Specializing in <strong>Typescript</strong>, <strong>React</strong>, and <strong>Node.js</strong>, I craft interactive and responsive web applications. I am committed to delivering solutions that are both <strong>high-performing</strong> and <strong>aesthetically pleasing</strong>."
+  },
+  "about": {
+    "blocks": [
+      "Built applications with over 100.000 monthly users.",
+      "Lead front-end development teams on projects with global reach.",
+      "Delivered end-to-end solutions to freelance clients, including project, creation and deployment.",
+      "These are some of the projects I've worked on:"
+    ]
+  },
+  "works": {
+    "onefan": {
+      "title": "The official website of an ",
+      "label": "European Footbal Club"
+    },
+    "hurb": {
+      "title": "a known brazilian",
+      "label": "online travel agency"
+    },
+    "digital-bank": {
+      "title": "a Fintech's ",
+      "label": "digital banking platform"
+    },
+    "more": {
+      "title": "and",
+      "label": "more projects"
+    },
+    "contact": {
+      "title": "Send me a message",
+      "name": "Company Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "submit": "Send",
+      "sent": "Sent!",
+      "sending": "Sending...",
+      "error": "Error sending message"
+    }
+  }
+}

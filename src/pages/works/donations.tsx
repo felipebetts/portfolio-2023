@@ -1,23 +1,28 @@
-import { WorkImage } from '@/components/layout/works/work'
+import React from 'react'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
+
 import WorkDetails from '@/components/layout/works/work-details'
 import Carousel from '@/components/shared/carousel'
 import CarouselItem from '@/components/shared/carousel-item'
 import LazyImage from '@/components/shared/lazy-image'
 import PillData from '@/components/shared/pill-data'
-import React from 'react'
 
+const images = [
+  'cover.png',
+  '3.png',
+  '4.png',
+  '5.png',
+  '6.png',
+  '7.png',
+  '8.png'
+]
 const Donations = () => {
-  const images = [
-    'cover.png',
-    '3.png',
-    '4.png',
-    '5.png',
-    '6.png',
-    '7.png',
-    '8.png'
-  ]
+  const { t } = useTranslation('donations')
+  const challenges = t('challenges.items', { returnObjects: true })
+  const highlights = t('highlights.items', { returnObjects: true })
   return (
-    <WorkDetails title="Donations Agreggator">
+    <WorkDetails title={t('title')}>
       <section className="py-3">
         <Carousel className="mx-auto">
           {images.map((el, i) => (
@@ -37,69 +42,39 @@ const Donations = () => {
       </section>
       <section className="py-3">
         {/* Overview / Introduction */}
-        <p className="text-lg mb-4">
-          Donations Aggregator is a platform designed to streamline charitable
-          donations for abandoned animals by funding treatment and shelter
-          initiatives. In response to a client’s vision, the platform leverages
-          QR codes in pet shops to guide pet lovers through a secure and
-          user-friendly donation process. Each pet shop acts as an affiliate,
-          earning a commission per donation while contributing to a sustainable
-          ecosystem that benefits both the cause and the business.
-        </p>
+        <p className="text-lg mb-4">{t('description')}</p>
 
         {/* Key Challenges and Solutions */}
         <div className="mb-4">
           <h3 className="text-2xl font-semibold mb-2">
-            Key Challenges and Solutions
+            {t('challenges.title')}
           </h3>
           <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>
-              <strong>Balancing Security and Simplicity:</strong> Implemented
-              SMS authentication using the smstoken API via a dedicated
-              Backend-for-Frontend (BFF) in Next.js, unifying a legacy mobile
-              login flow for a consistent experience.
-            </li>
-            <li>
-              <strong>Seamless Payment Integration:</strong> Integrated Mercado
-              Pago’s API to support both credit card and PIX transactions,
-              ensuring that sensitive payment data was securely tokenized on the
-              backend.
-            </li>
+            {challenges.map((challenge, i) => (
+              <li key={challenge.title}>
+                <strong>{challenge.title}</strong> {challenge.description}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* My Role */}
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">My Role</h3>
-          <p className="text-lg">
-            I led the development of Donations Aggregator, transforming the
-            client’s vision into a robust, secure platform. I engineered the SMS
-            authentication flow, revamped the legacy login process, and
-            implemented a seamless, on-site checkout experience by integrating
-            Mercado Pago’s API for secure payment processing.
-          </p>
+          <h3 className="text-2xl font-semibold mb-2">{t('role.title')}</h3>
+          <p className="text-lg">{t('role.description')}</p>
         </div>
 
         {/* Technical Highlights */}
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">Technical Highlights</h3>
+          <h3 className="text-2xl font-semibold mb-2">
+            {t('highlights.title')}
+          </h3>
           <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>
-              <strong>Secure Authentication:</strong> Leveraged the smstoken API
-              with a dedicated BFF in Next.js to create a unified and secure
-              login process.
-            </li>
-            <li>
-              <strong>Payment Integration:</strong> Seamlessly integrated
-              Mercado Pago’s API for both credit card and PIX payments, with
-              tokenization of sensitive data enhancing security.
-            </li>
-            <li>
-              <strong>Cohesive UI/UX:</strong> Adopted Material UI to build a
-              consistent, modern interface that met the client’s specifications
-              and improved usability, despite the absence of a dedicated
-              designer.
-            </li>
+            {highlights.map((highlight, i) => (
+              <li key={highlight.title}>
+                <strong>{highlight.title}</strong> {highlight.description}
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -146,6 +121,14 @@ const Donations = () => {
       </section>
     </WorkDetails>
   )
+}
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'donations']))
+    }
+  }
 }
 
 export default Donations

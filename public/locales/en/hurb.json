@@ -1,0 +1,57 @@
+{
+  "title": "Online Travel Agency",
+  "subtitle": "Hurb",
+  "overview": "At Hurb, a leading online travel agency, I worked as a Fullstack Software Developer in 2023 within the Customer Experience team. My role was front-end heavy, yet I contributed to both front-end and back-end projects. Working in an environment structured around micro-frontends and microservices, I gained exposure to multiple programming languages and innovative technologies, accelerating my professional growth.",
+  "other-technologies": "Other Technologies",
+  "challenges": {
+    "title": "Key Challenges and Solutions",
+    "items": [
+      {
+        "title": "Diverse Technology Stacks:",
+        "description": "Each module was built using different languages like Node, PHP, Go, and Python. This modular architecture required me to learn and adapt to varying protocols of communication between services."
+      },
+      {
+        "title": "Container Orchestration:",
+        "description": "All projects ran locally on an internal container orchestration system—custom-built for Hurb—similar to Kubernetes, ensuring efficient development."
+      }
+    ]
+  },
+  "role": {
+    "title": "My Role",
+    "description": "As a Fullstack Developer, I contributed to both the front-end and back-end, with a heavier focus on the front-end. I developed website pages using Next.js with CSS modules + Sass, produced email templates with MJML, crafted GraphQL queries and mutations, and implemented backend functionalities in Node.js and Django. Collaborating with a tech lead, designer, project manager, and other devs, I ensured that every part of the project was aligned with Hurb's high standards for user experience."
+  },
+  "highlights": {
+    "title": "Technical Highlights",
+    "items": [
+      {
+        "title": "Modern Web Stack:",
+        "description": "Leveraged React, Next.js, and Node.js for robust development, complemented by CSS Modules with Sass for maintainable styling."
+      },
+      {
+        "title": "Advanced Tooling:",
+        "description": "Utilized GraphQL for efficient data operations and MJML for responsive email template creation."
+      }
+    ]
+  },
+  "approach": {
+    "title": "Development Approach",
+    "items": [
+      {
+        "title": "Scrum Methodology:",
+        "description": "Participated in daily stand-ups, weekly planning, refining sessions, and code reviews, all of which fostered a high-quality, collaborative work environment."
+      },
+      {
+        "title": "Quality Assurance:",
+        "description": "Employed automated tests and, in some projects, TDD to maintain robust code standards, ensuring reliable and efficient feature delivery."
+      }
+    ]
+  },
+  "outcome": {
+    "title": "Outcome and Impact",
+    "description": "Although my tenure at Hurb was brief, I significantly contributed to the team by suggesting architectural improvements that reduced feature development time by over 30 hours. This experience not only improved team efficiency but also deepened my understanding of scalable systems and multi-language integration in a dynamic, fast-paced environment."
+  },
+  "learnings": {
+    "title": "Key Learnings",
+    "description": "Working at Hurb provided an intense learning curve, where I absorbed best practices in Linux, Docker, and command-line tools. I also expanded my skill set by learning basic PHP, Go, and advanced tools like MJML and GraphQL. This collaborative and agile setting reinforced the importance of structured development processes and continuous learning, preparing me to tackle complex challenges in modern software development."
+  }
+}

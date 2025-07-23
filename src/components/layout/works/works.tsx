@@ -14,63 +14,69 @@ import {
   WorkRight
 } from './work'
 import Image from 'next/image'
-
-const workList = [
-  {
-    sub: '',
-    main: (
-      <>
-        The official website of an{' '}
-        <WorkLink href="/works/onefan">European Footbal Club</WorkLink>
-      </>
-    ),
-    image: '/images/onefan/notebook.png'
-  },
-  {
-    sub: '',
-    main: (
-      <>
-        a known brazilian{' '}
-        <WorkLink href="/works/hurb">online travel agency</WorkLink>
-      </>
-    ),
-    image: '/images/hurb/notebook.png'
-  },
-  {
-    sub: '',
-    main: (
-      <>
-        a Fintech&apos;s{' '}
-        <WorkLink href="/works/digital-bank">digital banking platform</WorkLink>
-      </>
-    ),
-    image: '/images/valepay/notebook.png'
-  },
-
-  // {
-  //   sub: 'Crafted',
-  //   main: (
-  //     <>
-  //       a{' '}
-  //       <WorkLink href="/works/budget-simulator">
-  //         Construction Budget Simulator
-  //       </WorkLink>
-  //     </>
-  //   ),
-  //   image: '/images/orcamento_express/notebook.png'
-  // },
-  {
-    sub: '',
-    main: (
-      <>
-        and <WorkLink href="/works">more projects</WorkLink>
-      </>
-    ),
-    image: '/images/orcamento_express/notebook.png'
-  }
-]
+import { useTranslation } from 'next-i18next'
 
 const Works = () => {
+  const { t } = useTranslation('home')
+
+  const workList = [
+    {
+      sub: '',
+      main: (
+        <>
+          {t('works.onefan.title')}{' '}
+          <WorkLink href="/works/onefan">{t('works.onefan.label')}</WorkLink>
+        </>
+      ),
+      image: '/images/onefan/notebook.png'
+    },
+    {
+      sub: '',
+      main: (
+        <>
+          {t('works.hurb.title')}{' '}
+          <WorkLink href="/works/hurb">{t('works.hurb.label')}</WorkLink>
+        </>
+      ),
+      image: '/images/hurb/notebook.png'
+    },
+    {
+      sub: '',
+      main: (
+        <>
+          {t('works.digital-bank.title')}{' '}
+          <WorkLink href="/works/digital-bank">
+            {t('works.digital-bank.label')}
+          </WorkLink>
+        </>
+      ),
+      image: '/images/valepay/notebook.png'
+    },
+
+    // {
+    //   sub: 'Crafted',
+    //   main: (
+    //     <>
+    //       a{' '}
+    //       <WorkLink href="/works/budget-simulator">
+    //         Construction Budget Simulator
+    //       </WorkLink>
+    //     </>
+    //   ),
+    //   image: '/images/orcamento_express/notebook.png'
+    // },
+    {
+      sub: '',
+      main: (
+        <>
+          {t('works.more.title')}{' '}
+          <WorkLink href="/works">{t('works.more.label')}</WorkLink>
+        </>
+      ),
+      image: '/images/orcamento_express/notebook.png'
+    }
+  ]
+
   return (
     <TileWrapper numOfPages={workList.length}>
       <TileBackground>

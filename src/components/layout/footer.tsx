@@ -1,20 +1,23 @@
 import Link from 'next/link'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
+
 import SocialLinks from './social-links'
 
-const links = [
-  {
-    label: 'works',
-    href: '/works'
-  },
-  {
-    label: 'contato@felipebetts.com.br',
-    href: 'mailto:contato@felipebetts.com.br'
-  }
-]
-
 const Footer: React.FC = () => {
+  const { t } = useTranslation('common')
+
+  const links = [
+    {
+      label: t('footer.works'),
+      href: '/works'
+    },
+    {
+      label: 'contato@felipebetts.com.br',
+      href: 'mailto:contato@felipebetts.com.br'
+    }
+  ]
+
   return (
     <footer className="flex flex-col gap-8 items-center justify-center bg-[var(--color-primary-500)] text-[var(--color-primary-100)] p-16 relative z-10">
       <section className="flex gap-8 items-center justify-center">

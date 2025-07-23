@@ -1,0 +1,61 @@
+{
+  "title": "Orçamento Express",
+  "subtitle": "iBuild",
+  "overview": "Orçamento Express é uma aplicação web que desenvolvi como projeto freelance para um cliente visando otimizar seu processo de qualificação de leads. Através de fluxos interativos e cálculos financeiros personalizados, os visitantes podem facilmente simular vários cenários de orçamento adaptados às suas necessidades.",
+  "other-technologies": "Outras Tecnologias",
+  "challenges": {
+    "title": "Principais Desafios e Soluções",
+    "items": [
+      {
+        "title": "Experiência de Usuário Complexa:",
+        "description": "A aplicação exigia uma experiência de simulação altamente visual com rotas de múltiplas etapas, animações (incluindo carrosséis) e preservação dinâmica de estado em cada etapa. Abordei isso projetando cuidadosamente a estrutura dos componentes e garantindo um gerenciamento suave do estado entre as mudanças de rota."
+      },
+      {
+        "title": "Integração com API com Documentação Limitada:",
+        "description": "A integração com a API do Bitrix24 foi desafiadora devido à documentação incompleta. Naveguei por essas lacunas através de testes extensivos e experimentação direta, garantindo uma troca de dados perfeita para submissão de leads."
+      }
+    ]
+  },
+  "role": {
+    "title": "Meu Papel",
+    "description": "Fui o único desenvolvedor, responsável por todas as fases do projeto — desde o levantamento inicial de requisitos e definição de escopo até codificação, implantação e configuração de DNS. Também orquestrei o cronograma do projeto usando uma abordagem waterfall otimizada para atender ao prazo do cliente de forma eficiente."
+  },
+  "highlights": {
+    "title": "Destaques Técnicos",
+    "items": [
+      {
+        "title": "Integração com Bitrix24:",
+        "description": "Implementei fluxos personalizados de submissão de leads via API do Bitrix24, estabelecendo a ponte entre as interações do usuário no front-end e o sistema CRM do cliente."
+      },
+      {
+        "title": "Fórmulas Financeiras Complexas:",
+        "description": "Embora as fórmulas tenham sido fornecidas pelo cliente, fui responsável por implementá-las com precisão na lógica da aplicação. O número e a complexidade desses cálculos exigiram testes meticulosos."
+      },
+      {
+        "title": "Implementação do Design:",
+        "description": "Converti os designs do Figma do cliente em uma UI totalmente funcional, garantindo fidelidade aos mockups fornecidos enquanto mantinha a organização e performance ideal do código."
+      }
+    ]
+  },
+  "approach": {
+    "title": "Abordagem de Desenvolvimento",
+    "items": [
+      {
+        "title": "Processo:",
+        "description": "Empreguei uma metodologia waterfall otimizada, focando em entrega rápida e feedback contínuo do cliente."
+      },
+      {
+        "title": "Testes:",
+        "description": "Devido ao ambiente acelerado de startup, os testes dependiam principalmente de verificação manual em vez de testes automatizados. No entanto, validei cuidadosamente os fluxos de usuário e cálculos para confirmar a funcionalidade confiável."
+      }
+    ]
+  },
+  "outcome": {
+    "title": "Resultado e Impacto",
+    "description": "Embora nenhuma métrica formal tenha sido rastreada, o cliente relatou menos consultas irrelevantes, efetivamente aliviando a carga de trabalho da equipe de vendas. A solução foi bem recebida, e havia planos para expandir ainda mais o projeto; no entanto, restrições orçamentárias limitaram o desenvolvimento adicional."
+  },
+  "learnings": {
+    "title": "Principais Aprendizados",
+    "description": "Trabalhar no Orçamento Express proporcionou uma experiência valiosa na implementação de designs intrincados do zero, equilibrando um cronograma de desenvolvimento acelerado com testes manuais rigorosos e navegando por documentação incompleta de terceiros. Ao dominar tanto os aspectos de negócio quanto técnicos—desde a negociação do contrato até uma aplicação polida e pronta para produção—entreguei uma solução que abordou efetivamente o desafio de qualificação de leads do cliente e destacou minha versatilidade como desenvolvedor de software front-end."
+  }
+}

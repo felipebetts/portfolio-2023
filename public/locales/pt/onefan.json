@@ -1,0 +1,61 @@
+{
+  "title": "Site Oficial do Osasuna",
+  "subtitle": "Onefan",
+  "overview": "OneFan é uma plataforma de engajamento para entusiastas do futebol, e neste projeto nos concentramos em engajar os torcedores do time espanhol Osasuna mantendo-os informados com atualizações dinâmicas em tempo real. Na OneFan, comecei minha jornada como Desenvolvedor Front-end Sênior e rapidamente avancei para Tech Lead da equipe web.",
+  "other-technologies": "Outras Tecnologias",
+  "challenges": {
+    "title": "Principais Desafios e Soluções",
+    "items": [
+      {
+        "title": "Modernização de Sistemas Legados:",
+        "description": "Atualizamos código desatualizado para alinhar com os padrões modernos de desempenho e escalabilidade."
+      },
+      {
+        "title": "Primeira Experiência como Tech Lead:",
+        "description": "Transição para um papel de liderança onde defini estratégias arquiteturais, otimizei processos e guiei uma equipe diversa de front-end."
+      },
+      {
+        "title": "Engajamento em Tempo Real:",
+        "description": "Integração com uma API interna para entregar atualizações ao vivo dos jogos automaticamente, garantindo que os fãs recebessem informações oportunas durante eventos críticos das partidas."
+      }
+    ]
+  },
+  "role": {
+    "title": "Meu Papel",
+    "description": "Inicialmente contratado como Desenvolvedor Front-end Sênior, fui promovido a Tech Lead em poucos meses. Minhas responsabilidades evoluíram do desenvolvimento de soluções front-end inovadoras para o gerenciamento da equipe, orquestração da distribuição de tarefas, planejamento de melhorias arquiteturais e refinamento dos nossos processos de desenvolvimento. Também forneci mentoria e suporte contínuos para ajudar a elevar o desempenho geral da equipe."
+  },
+  "highlights": {
+    "title": "Destaques Técnicos",
+    "items": [
+      {
+        "title": "Arquitetura Escalável:",
+        "description": "Utilizamos React, Next.js, TypeScript e Axios para construir uma plataforma robusta que suporta mais de 100 mil usuários ativos mensais com um tempo de atividade superior a 99,9%."
+      },
+      {
+        "title": "Recurso de Atualizações ao Vivo:",
+        "description": "Desenvolvemos atualizações em tempo real do site para eventos ao vivo dos jogos, melhorando significativamente o engajamento dos fãs ao entregar informações imediatas das partidas."
+      }
+    ]
+  },
+  "approach": {
+    "title": "Abordagem de Desenvolvimento",
+    "items": [
+      {
+        "title": "Agile & Scrum:",
+        "description": "Empregamos metodologias ágeis com daily stand-ups, planejamento de sprint e revisões regulares de código para manter alta qualidade de entrega e melhoria contínua."
+      },
+      {
+        "title": "Otimização de Processos:",
+        "description": "Instituímos testes automatizados e ciclos rigorosos de revisão, garantindo que nosso código permanecesse robusto e manutenível enquanto fomentávamos um ambiente que incentivava a inovação."
+      }
+    ]
+  },
+  "outcome": {
+    "title": "Resultado e Impacto",
+    "description": "O projeto agora engaja ativamente cerca de 100 mil usuários por mês, com picos significativos de tráfego durante jogos ao vivo e eventos importantes. Ao modernizar sistemas legados e implementar integração de dados em tempo real, alcançamos uma plataforma de alto desempenho com escalabilidade e confiabilidade excepcionais."
+  },
+  "learnings": {
+    "title": "Principais Aprendizados",
+    "description": "Liderar a equipe de front-end na OneFan foi uma experiência transformadora. Aprimorei minha expertise técnica e habilidades de liderança equilibrando disciplina de processo com inovação criativa. Este papel aprofundou meu entendimento sobre design de sistemas escaláveis, manipulação de dados em tempo real e colaboração efetiva em equipe em um ambiente acelerado e de alta pressão."
+  }
+}

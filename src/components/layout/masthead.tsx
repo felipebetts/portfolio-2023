@@ -1,10 +1,12 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 
 import { ParallaxSinglePage } from '@/components/shared/parallax'
 import SocialLinks from './social-links'
 
 const Masthead: React.FC = () => {
+  const { t } = useTranslation('home')
   const [imageLoaded, setImageLoaded] = useState(false)
   const videoRef = useRef<HTMLVideoElement | null>(null)
 
@@ -50,9 +52,9 @@ const Masthead: React.FC = () => {
               imageLoaded ? 'opacity-100' : 'opacity-0'
             }`}
           />
-          <h1 className="mb-6 text-4xl xl:text-5xl">Felipe Betts</h1>
+          <h1 className="mb-6 text-4xl xl:text-5xl">{t('masthead.title')}</h1>
           <h2 className="mb-2 text-2xl xl:text-3xl -tracking-tight">
-            Software Developer
+            {t('masthead.subtitle')}
           </h2>
           <SocialLinks />
         </div>

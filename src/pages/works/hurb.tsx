@@ -1,14 +1,20 @@
 import React from 'react'
 import Link from 'next/link'
 import { IoExitOutline } from 'react-icons/io5'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 import { WorkImage } from '@/components/layout/works/work'
 import WorkDetails from '@/components/layout/works/work-details'
 import PillData from '@/components/shared/pill-data'
 
 const Hurb: React.FC = () => {
+  const { t } = useTranslation('hurb')
+  const challenges = t('challenges.items', { returnObjects: true })
+  const highlights = t('highlights.items', { returnObjects: true })
+  const approaches = t('approach.items', { returnObjects: true })
   return (
-    <WorkDetails sub="Hurb" title="Online Travel Agency">
+    <WorkDetails sub={t('subtitle')} title={t('title')}>
       <section className="py-3">
         <WorkImage alt="cover" src="/images/hurb/hurb-home.png" />
       </section>
@@ -26,120 +32,84 @@ const Hurb: React.FC = () => {
         <PillData tag="Stack">
           <p>React, Next.js, Node.js</p>
         </PillData>
-        <PillData tag="Other Technologies">
+        <PillData tag={t('other-technologies')}>
           <p>Docker, GraphQL, MJML, CSS</p>
         </PillData>
       </section>
       <section className="py-3">
         {/* Overview / Introduction */}
-        <p className="text-lg mb-4">
-          At Hurb, a leading online travel agency, I worked as a Fullstack
-          Software Developer in 2023 within the Customer Experience team. My
-          role was front-end heavy, yet I contributed to both front-end and
-          back-end projects. Working in an environment structured around
-          micro-frontends and microservices, I gained exposure to multiple
-          programming languages and innovative technologies, accelerating my
-          professional growth.
-        </p>
+        <p className="text-lg mb-4">{t('overview')}</p>
 
         {/* Key Challenges and Solutions */}
         <div className="mb-4">
           <h3 className="text-2xl font-semibold mb-2">
-            Key Challenges and Solutions
+            {t('challenges.title')}
           </h3>
           <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>
-              <strong>Diverse Technology Stacks:</strong> Each module was built
-              using different languages like Node, PHP, Go, and Python. This
-              modular architecture required me to learn and adapt to varying
-              protocols of communication between services.
-            </li>
-            <li>
-              <strong>Container Orchestration:</strong> All projects ran locally
-              on an internal container orchestration system—custom-built for
-              Hurb—similar to Kubernetes, ensuring efficient development.
-            </li>
+            {challenges.map((challenge, index) => (
+              <li key={index}>
+                <strong>{challenge.title}</strong> {challenge.description}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* My Role */}
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">My Role</h3>
-          <p className="text-lg">
-            As a Fullstack Developer, I contributed to both the front-end and
-            back-end, with a heavier focus on the front-end. I developed website
-            pages using Next.js with CSS modules + Sass, produced email
-            templates with MJML, crafted GraphQL queries and mutations, and
-            implemented backend functionalities in Node.js and Django.
-            Collaborating with a tech lead, designer, project manager, and other
-            devs, I ensured that every part of the project was aligned with
-            Hurb&apos;s high standards for user experience.
-          </p>
+          <h3 className="text-2xl font-semibold mb-2">{t('role.title')}</h3>
+          <p className="text-lg">{t('role.description')}</p>
         </div>
 
         {/* Technical Highlights */}
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">Technical Highlights</h3>
+          <h3 className="text-2xl font-semibold mb-2">
+            {t('highlights.title')}
+          </h3>
           <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>
-              <strong>Modern Web Stack:</strong> Leveraged React, Next.js, and
-              Node.js for robust development, complemented by CSS Modules with
-              Sass for maintainable styling.
-            </li>
-            <li>
-              <strong>Advanced Tooling:</strong> Utilized GraphQL for efficient
-              data operations and MJML for responsive email template creation.
-            </li>
+            {highlights.map((highlight, index) => (
+              <li key={index}>
+                <strong>{highlight.title}</strong> {highlight.description}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Development Approach */}
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">Development Approach</h3>
+          <h3 className="text-2xl font-semibold mb-2">{t('approach.title')}</h3>
           <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>
-              <strong>Scrum Methodology:</strong> Participated in daily
-              stand-ups, weekly planning, refining sessions, and code reviews,
-              all of which fostered a high-quality, collaborative work
-              environment.
-            </li>
-            <li>
-              <strong>Quality Assurance:</strong> Employed automated tests and,
-              in some projects, TDD to maintain robust code standards, ensuring
-              reliable and efficient feature delivery.
-            </li>
+            {approaches.map((approach, index) => (
+              <li key={index}>
+                <strong>{approach.title}</strong> {approach.description}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Outcome and Impact */}
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">Outcome and Impact</h3>
-          <p className="text-lg">
-            Although my tenure at Hurb was brief, I significantly contributed to
-            the team by suggesting architectural improvements that reduced
-            feature development time by over 30 hours. This experience not only
-            improved team efficiency but also deepened my understanding of
-            scalable systems and multi-language integration in a dynamic,
-            fast-paced environment.
-          </p>
+          <h3 className="text-2xl font-semibold mb-2">{t('outcome.title')}</h3>
+          <p className="text-lg">{t('outcome.description')}</p>
         </div>
 
         {/* Key Learnings */}
         <div>
-          <h3 className="text-2xl font-semibold mb-2">Key Learnings</h3>
-          <p className="text-lg">
-            Working at Hurb provided an intense learning curve, where I absorbed
-            best practices in Linux, Docker, and command-line tools. I also
-            expanded my skill set by learning basic PHP, Go, and advanced tools
-            like MJML and GraphQL. This collaborative and agile setting
-            reinforced the importance of structured development processes and
-            continuous learning, preparing me to tackle complex challenges in
-            modern software development.
-          </p>
+          <h3 className="text-2xl font-semibold mb-2">
+            {t('learnings.title')}
+          </h3>
+          <p className="text-lg">{t('learnings.description')}</p>
         </div>
       </section>
     </WorkDetails>
   )
+}
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'hurb']))
+    }
+  }
 }
 
 export default Hurb
