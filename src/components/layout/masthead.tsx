@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next'
 
 import { ParallaxSinglePage } from '@/components/shared/parallax'
 import SocialLinks from './social-links'
+import TranslationLinks from './translation-links'
 
 const Masthead: React.FC = () => {
   const { t } = useTranslation('home')
@@ -36,6 +37,9 @@ const Masthead: React.FC = () => {
       </video>
       <div className="min-h-screen h-full w-full flex flex-col justify-center items-center">
         <div className="absolute w-full h-full z-10 bg-black/60"></div>
+        <div className="shrink-0 z-20 p-4">
+          <TranslationLinks />
+        </div>
         <div
           className={`
                     p-12 font-bold z-20 text-[var(--color-primary-100)] drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] text-center flex flex-1 items-center justify-center flex-col

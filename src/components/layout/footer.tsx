@@ -3,6 +3,7 @@ import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import SocialLinks from './social-links'
+import TranslationLinks from './translation-links'
 
 const Footer: React.FC = () => {
   const { t } = useTranslation('common')
@@ -32,6 +33,7 @@ const Footer: React.FC = () => {
         ))}
       </section>
       <SocialLinks />
+      <TranslationLinks />
     </footer>
   )
 }
