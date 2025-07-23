@@ -1,10 +1,13 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 
 import { ParallaxSinglePage } from '@/components/shared/parallax'
 import SocialLinks from './social-links'
+import TranslationLinks from './translation-links'
 
 const Masthead: React.FC = () => {
+  const { t } = useTranslation('home')
   const [imageLoaded, setImageLoaded] = useState(false)
   const videoRef = useRef<HTMLVideoElement | null>(null)
 
@@ -34,6 +37,9 @@ const Masthead: React.FC = () => {
       </video>
       <div className="min-h-screen h-full w-full flex flex-col justify-center items-center">
         <div className="absolute w-full h-full z-10 bg-black/60"></div>
+        <div className="shrink-0 z-20 p-4">
+          <TranslationLinks />
+        </div>
         <div
           className={`
                     p-12 font-bold z-20 text-[var(--color-primary-100)] drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] text-center flex flex-1 items-center justify-center flex-col
@@ -50,9 +56,9 @@ const Masthead: React.FC = () => {
               imageLoaded ? 'opacity-100' : 'opacity-0'
             }`}
           />
-          <h1 className="mb-6 text-4xl xl:text-5xl">Felipe Betts</h1>
+          <h1 className="mb-6 text-4xl xl:text-5xl">{t('masthead.title')}</h1>
           <h2 className="mb-2 text-2xl xl:text-3xl -tracking-tight">
-            Software Developer
+            {t('masthead.subtitle')}
           </h2>
           <SocialLinks />
         </div>

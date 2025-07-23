@@ -1,0 +1,51 @@
+{
+  "head": {
+    "title": "Felipe Betts - Desenvolvedor de Software",
+    "description": "Olá, sou Felipe, um desenvolvedor de software com mais de 4 anos de experiência em desenvolvimento web."
+  },
+  "masthead": {
+    "title": "Felipe Betts",
+    "subtitle": "Desenvolvedor de Software"
+  },
+  "profile": {
+    "heading": "Olá, sou Felipe, um desenvolvedor de software com mais de 4 anos de experiência em desenvolvimento web.",
+    "p1": "Nesse período, tive a oportunidade de trabalhar com grandes empresas, startups de alta velocidade e entregar soluções personalizadas para clientes freelancers.",
+    "p2": "Especializando-me em <strong>Typescript</strong>, <strong>React</strong> e <strong>Node.js</strong>, crio aplicações web interativas e responsivas. Sou comprometido em entregar soluções que sejam tanto <strong>de alto desempenho</strong> quanto <strong>esteticamente agradáveis</strong>."
+  },
+  "about": {
+    "blocks": [
+      "Desenvolvi aplicações com mais de 100.000 usuários mensais.",
+      "Liderei equipes de desenvolvimento front-end em projetos com alcance global.",
+      "Entreguei soluções end-to-end para clientes freelancers, incluindo projeto, criação e implantação.",
+      "Estes são alguns dos projetos que trabalhei:"
+    ]
+  },
+  "works": {
+    "onefan": {
+      "title": "O site oficial de um ",
+      "label": "clube de futebol europeu"
+    },
+    "hurb": {
+      "title": "uma grande ",
+      "label": "agência de viagens online"
+    },
+    "digital-bank": {
+      "title": "uma plataforma de ",
+      "label": "banco digital"
+    },
+    "more": {
+      "title": "e",
+      "label": "mais projetos"
+    }
+  },
+  "contact": {
+    "title": "Envie uma mensagem",
+    "name": "Nome da Empresa",
+    "email": "Seu Email",
+    "message": "Sua Mensagem",
+    "submit": "Enviar",
+    "sent": "Enviado!",
+    "sending": "Enviando...",
+    "error": "Erro ao enviar mensagem"
+  }
+}

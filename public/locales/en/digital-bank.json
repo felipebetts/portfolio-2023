@@ -1,0 +1,68 @@
+{
+  "title": "Digital Bank",
+  "subtitle": "Valepay",
+  "description": "<strong>Digital Bank – Valepay</strong> is a cutting-edge digital banking platform designed specifically for the tourism industry. As the sole front-end developer on a lean, agile team—comprising a designer and a back-end co-founder—I was responsible for every aspect of the client-side development, from technology and architectural decisions to coding the entire user interface from scratch. This close collaboration ensured an exceptional and secure user experience.",
+  "challenges": {
+    "title": "Key Challenges and Solutions",
+    "items": [
+      {
+        "title": "Complex Role-Based Authentication:",
+        "description": "Implementing a robust system to handle multiple user roles (agencies, managers, sellers), each with tailored access and distinct dashboard views."
+      },
+      {
+        "title": "Financial Transaction Security:",
+        "description": "Integrating secure financial functionalities such as PIX and credit card transactions, while managing the intricacies of date variations and calendar compositions for payment scheduling."
+      },
+      {
+        "title": "Custom UI Components:",
+        "description": "Creating reusable components like interactive calendars, responsive sidebars, and paginated tables to maintain a consistent design system and ensure a user-friendly interface."
+      }
+    ]
+  },
+  "role": {
+    "title": "My Role",
+    "description": "I served as the sole front-end developer, owning the entire client-side architecture and implementation. I chose and implemented technologies such as Next.js and Styled Components to build a dynamic, scalable, and production-ready platform, collaborating closely with both the designer and back-end developer to optimize the user experience."
+  },
+  "highlights": {
+    "title": "Technical Highlights",
+    "items": [
+      {
+        "title": "Next.js & React:",
+        "description": "Leveraged for superior production performance and building dynamic, responsive interfaces."
+      },
+      {
+        "title": "Styled Components:",
+        "description": "Utilized to establish a consistent and customizable design system through reusable UI components."
+      },
+      {
+        "title": "Axios with Custom Middleware:",
+        "description": "Streamlined API communications by automatically injecting authentication tokens and handling errors uniformly."
+      },
+      {
+        "title": "Chart.js and Quill:",
+        "description": "Integrated to deliver responsive data visualizations and enhance CRM functionalities by enabling the generation of promotional content."
+      }
+    ]
+  },
+  "approach": {
+    "title": "Development Approach",
+    "items": [
+      {
+        "title": "Agile Kanban:",
+        "description": "Employed to ensure rapid development and iterative progress in a fast-paced startup environment."
+      },
+      {
+        "title": "Efficient Collaboration:",
+        "description": "Worked in close sync with the designer and back-end co-founder to deliver a production-ready platform."
+      },
+      {
+        "title": "Focus on Delivery:",
+        "description": "While unit tests were not implemented to maintain agility, rigorous manual testing guaranteed reliable functionality."
+      }
+    ]
+  },
+  "outcome": {
+    "title": "Outcome and Impact",
+    "description": "Digital Bank was built from the ground up as the front-end foundation for Valepay's digital banking platform. Although formal metrics are unavailable, the platform remains live at its designated URL and continues to support the startup's expansion in the tourism sector. This project demonstrates my ability to build secure, scalable, and user-centric applications that effectively address complex business challenges."
+  }
+}

@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'next-i18next'
 
 import { delay } from '@/utils/helpers'
 
 const Contact = () => {
+  const { t } = useTranslation('home')
+
   const [isLoadingSubmit, setIsLoadingSubmit] = useState(false)
   const [isMailSent, setIsMailSent] = useState(false)
 
@@ -15,7 +18,7 @@ const Contact = () => {
     setIsLoadingSubmit(true)
     try {
       const emailData = { name, from, text }
-      const res = await fetch('/api/mail', {
+      await fetch('/api/mail', {
         method: 'POST',
         body: JSON.stringify(emailData),
         headers: {
@@ -35,7 +38,7 @@ const Contact = () => {
   return (
     <div className="bg-[var(--color-primary-500)] text-[var(--color-primary-100)] flex flex-col justify-center pt-10 min-h-[90vh] relative z-10">
       <div className="flex flex-1 flex-col justify-center items-center pt-10 lg:pt-6">
-        <h2 className="text-4xl font-bold">Send me a message</h2>
+        <h2 className="text-4xl font-bold">{t('contact.title')}</h2>
         <form
           className="flex flex-col gap-4 mt-16 px-10 lg:mt-20 min-w-full lg:min-w-[500px]"
           onSubmit={handleSendEmail}
@@ -46,7 +49,7 @@ const Contact = () => {
             required
             maxLength={128}
             type="text"
-            placeholder="Company Name"
+            placeholder={t('contact.name')}
             className="bg-[var(--color-primary-500)] text-[var(--color-primary-100)] outline-none border-2 border-[var(--color-primary-100)] rounded-md px-4 py-2"
             value={name}
             onChange={e => setName(e.target.value)}
@@ -57,7 +60,7 @@ const Contact = () => {
             required
             maxLength={128}
             type="email"
-            placeholder="Your Email"
+            placeholder={t('contact.email')}
             className="bg-[var(--color-primary-500)] text-[var(--color-primary-100)] outline-none border-2 border-[var(--color-primary-100)] rounded-md px-4 py-2"
             value={from}
             onChange={e => setFrom(e.target.value)}
@@ -65,7 +68,7 @@ const Contact = () => {
           <textarea
             name="message"
             id="message"
-            placeholder="Additional information"
+            placeholder={t('contact.message')}
             required
             maxLength={1048576}
             className="bg-[var(--color-primary-500)] text-[var(--color-primary-100)] outline-none border-2 border-[var(--color-primary-100)] rounded-md px-4 py-2 min-h-[16em]"
@@ -103,7 +106,7 @@ const Contact = () => {
                       ></path>{' '}
                     </g>
                   </svg>
-                  <div>Sent!</div>
+                  <div>{t('contact.sent')}</div>
                 </div>
               ) : isLoadingSubmit ? (
                 <div className="flex items-center justify-center gap-2">
@@ -127,10 +130,10 @@ const Contact = () => {
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                     ></path>
                   </svg>
-                  <div>Sending...</div>
+                  <div>{t('contact.sending')}</div>
                 </div>
               ) : (
-                <>Send</>
+                <>{t('contact.submit')}</>
               )}
             </button>
           </div>
