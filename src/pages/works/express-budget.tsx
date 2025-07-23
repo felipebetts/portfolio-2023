@@ -10,13 +10,14 @@ import CarouselItem from '@/components/shared/carousel-item'
 import LazyImage from '@/components/shared/lazy-image'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import { Item } from '../../components/layout/works/types'
 
 const ExpressBudget = () => {
   const images = ['cover.png', '1.png', '2.png', '3.png']
   const { t } = useTranslation('express-budget')
-  const challenges = t('challenges.items', { returnObjects: true })
-  const highlights = t('highlights.items', { returnObjects: true })
-  const approaches = t('approach.items', { returnObjects: true })
+  const challenges = t('challenges.items', { returnObjects: true }) as Item[]
+  const highlights = t('highlights.items', { returnObjects: true }) as Item[]
+  const approaches = t('approach.items', { returnObjects: true }) as Item[]
   return (
     <WorkDetails sub={t('subtitle')} title={t('title')}>
       <section className="py-3">

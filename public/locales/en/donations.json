@@ -34,5 +34,26 @@
         "description": "Adopted Material UI to build a consistent, modern interface that met the client’s specifications and improved usability, despite the absence of a dedicated designer."
       }
     ]
+  },
+  "approach": {
+    "title": "Development Approach",
+    "items": [
+      {
+        "title": "Client Collaboration:",
+        "description": "Worked closely with the client to define design and functionality, ensuring the platform was both secure and easy to use."
+      },
+      {
+        "title": "Modernizing Legacy Systems:",
+        "description": "Integrated new technologies into an existing legacy environment, delivering a unified authentication and payment experience."
+      }
+    ]
+  },
+  "outcome": {
+    "title": "Outcome and Impact",
+    "description": "Donations Aggregator effectively streamlines the donation process for abandoned animals while generating sustainable revenue for pet shop affiliates. As one of my first major freelance projects, it stands as a testament to my ability to build secure, scalable digital solutions that meet both business and user needs."
+  },
+  "learnings": {
+    "title": "Key Learnings",
+    "description": "This project reinforced the importance of integrating modern authentication and payment systems into legacy architectures. I learned to balance robust security measures with simplicity, ensuring a seamless and cohesive user experience throughout the platform."
   }
 }

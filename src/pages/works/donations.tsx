@@ -7,6 +7,7 @@ import Carousel from '@/components/shared/carousel'
 import CarouselItem from '@/components/shared/carousel-item'
 import LazyImage from '@/components/shared/lazy-image'
 import PillData from '@/components/shared/pill-data'
+import { Item } from '../../components/layout/works/types'
 
 const images = [
   'cover.png',
@@ -19,8 +20,9 @@ const images = [
 ]
 const Donations = () => {
   const { t } = useTranslation('donations')
-  const challenges = t('challenges.items', { returnObjects: true })
-  const highlights = t('highlights.items', { returnObjects: true })
+  const challenges = t('challenges.items', { returnObjects: true }) as Item[]
+  const highlights = t('highlights.items', { returnObjects: true }) as Item[]
+  const approach = t('approach.items', { returnObjects: true }) as Item[]
   return (
     <WorkDetails title={t('title')}>
       <section className="py-3">
@@ -80,43 +82,28 @@ const Donations = () => {
 
         {/* Development Approach */}
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">Development Approach</h3>
+          <h3 className="text-2xl font-semibold mb-2">{t('approach.title')}</h3>
           <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>
-              <strong>Client Collaboration:</strong> Worked closely with the
-              client to define design and functionality, ensuring the platform
-              was both secure and easy to use.
-            </li>
-            <li>
-              <strong>Modernizing Legacy Systems:</strong> Integrated new
-              technologies into an existing legacy environment, delivering a
-              unified authentication and payment experience.
-            </li>
+            {approach.map((item, i) => (
+              <li key={item.title}>
+                <strong>{item.title}</strong> {item.description}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Outcome and Impact */}
         <div className="mb-4">
-          <h3 className="text-2xl font-semibold mb-2">Outcome and Impact</h3>
-          <p className="text-lg">
-            Donations Aggregator effectively streamlines the donation process
-            for abandoned animals while generating sustainable revenue for pet
-            shop affiliates. As one of my first major freelance projects, it
-            stands as a testament to my ability to build secure, scalable
-            digital solutions that meet both business and user needs.
-          </p>
+          <h3 className="text-2xl font-semibold mb-2">{t('outcome.title')}</h3>
+          <p className="text-lg">{t('outcome.description')}</p>
         </div>
 
         {/* Key Learnings */}
         <div>
-          <h3 className="text-2xl font-semibold mb-2">Key Learnings</h3>
-          <p className="text-lg">
-            This project reinforced the importance of integrating modern
-            authentication and payment systems into legacy architectures. I
-            learned to balance robust security measures with simplicity,
-            ensuring a seamless and cohesive user experience throughout the
-            platform.
-          </p>
+          <h3 className="text-2xl font-semibold mb-2">
+            {t('learnings.title')}
+          </h3>
+          <p className="text-lg">{t('learnings.description')}</p>
         </div>
       </section>
     </WorkDetails>

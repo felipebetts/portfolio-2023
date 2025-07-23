@@ -9,13 +9,14 @@ import PillData from '@/components/shared/pill-data'
 import Carousel from '@/components/shared/carousel'
 import CarouselItem from '@/components/shared/carousel-item'
 import LazyImage from '@/components/shared/lazy-image'
+import { Item } from '../../components/layout/works/types'
 
 const DigitalBank = () => {
   const images = ['1.jpg', '2.jpg', 'login.png']
   const { t } = useTranslation('digital-bank')
-  const challenges = t('challenges.items', { returnObjects: true })
-  const highlights = t('highlights.items', { returnObjects: true })
-  const approach = t('approach.items', { returnObjects: true })
+  const challenges = t('challenges.items', { returnObjects: true }) as Item[]
+  const highlights = t('highlights.items', { returnObjects: true }) as Item[]
+  const approach = t('approach.items', { returnObjects: true }) as Item[]
   return (
     <WorkDetails sub={t('subtitle')} title={t('title')}>
       <section className="py-3">

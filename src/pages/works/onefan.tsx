@@ -7,12 +7,13 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { WorkImage } from '@/components/layout/works/work'
 import WorkDetails from '@/components/layout/works/work-details'
 import PillData from '@/components/shared/pill-data'
+import { Item } from '../../components/layout/works/types'
 
 const Onefan: React.FC = () => {
   const { t } = useTranslation('onefan')
-  const challenges = t('challenges.items', { returnObjects: true })
-  const highlights = t('highlights.items', { returnObjects: true })
-  const approaches = t('approach.items', { returnObjects: true })
+  const challenges = t('challenges.items', { returnObjects: true }) as Item[]
+  const highlights = t('highlights.items', { returnObjects: true }) as Item[]
+  const approaches = t('approach.items', { returnObjects: true }) as Item[]
   return (
     <WorkDetails sub={t('subtitle')} title={t('title')}>
       <section className="py-3">
